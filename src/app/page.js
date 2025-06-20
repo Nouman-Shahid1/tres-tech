@@ -30,7 +30,7 @@ export default function Home() {
         className={`relative w-full h-[150vh] bg-cover bg-center bg-fixed ${poppins.variable} font-sans`}
         style={{
           backgroundImage:
-            "url('https://websitedemos.net/business-consultancy-firm-04/wp-content/uploads/sites/882/2021/06/hero-free-img.jpg')",
+            "url(url(&#39;https://websitedemos.net/business-consultancy-firm-04/wp-content/uploads/sites/882/2021/06/hero-free-img.jpg&#39;)",
         }}
       >
         {/* <Navbar /> */}

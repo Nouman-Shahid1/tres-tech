@@ -12,7 +12,9 @@ const openSans = Open_Sans({
 });
 export default function Navbar() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  const openCalendly = () => {
+    window.open("https://calendly.com/muhammadnoumansha140", "_blank");
+  };
   return (
     <nav
       className={`${openSans.className} absolute top-0 left-0 right-0 z-50 bg-transparent py-4 px-6 font-sans text-sm font-semibold`}
@@ -22,56 +24,49 @@ export default function Navbar() {
           <Image
             src={logo}
             alt="Logo"
-            width={120}
+            width={180}
             height={20}
             className="object-contain h-24 "
           />
         </div>
 
-        <div className="hidden md:flex items-center space-x-6 text-[#ffffffb3] text-[15px]">
-          <Link href="/" className="hover:text-white transition-colors px-2">
+        <div className="hidden md:flex items-center space-x-6 text-[#fffefebd] text-[15px]">
+          <Link
+            href="/"
+            className="hover:text-[#4370F3] transition-colors px-2"
+          >
             Home
           </Link>
           <Link
             href="/services"
-            className="hover:text-white transition-colors px-2"
+            className="hover:text-[#4370F3] transition-colors px-2"
           >
             Consulting Services
           </Link>
-          <Link
-            href="/training"
-            className="hover:text-white transition-colors px-2"
-          >
-            Training
-          </Link>
-          <Link
-            href="/insights"
-            className="hover:text-white transition-colors px-2"
-          >
-            Insights
-          </Link>
+
           <Link
             href="/success"
-            className="hover:text-white transition-colors px-2"
+            className="hover:text-[#4370F3] transition-colors px-2"
           >
             Success Stories
           </Link>
           <Link
             href="/about"
-            className="hover:text-white transition-colors px-2"
+            className="hover:text-[#4370F3] transition-colors px-2"
           >
             About
           </Link>
           <Link
             href="/contact"
-            className="hover:text-white transition-colors px-2"
+            className="hover:text-[#4370F3] transition-colors px-2"
           >
             Contact
           </Link>
           <div className="hidden md:block ml-6">
             <Link
               href="#"
-              className="bg-white text-black px-7 py-5 text-sm hover:text-red-600 transition-colors"
+              onClick={openCalendly}
+              className="bg-white text-black px-6 py-5 text-sm hover:text-[#4370F3] transition-colors"
             >
               BOOK A FREE CONSULTING CALL
             </Link>

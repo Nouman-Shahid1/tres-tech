@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import logo from "../../assests/logo.png";
 import Link from "next/link";
@@ -12,12 +12,29 @@ const openSans = Open_Sans({
 });
 export default function Navbar() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const openCalendly = () => {
     window.open("https://calendly.com/muhammadnoumansha140", "_blank");
   };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <nav
-      className={`${openSans.className} absolute top-0 left-0 right-0 z-50 bg-transparent py-4 px-6 font-sans text-sm font-semibold`}
+      className={`${
+        openSans.className
+      } fixed top-0 left-0 right-0 z-50 px-6 font-sans text-sm font-semibold transition-all duration-300 ${
+        scrolled ? "bg-[#F7F7F7]" : "bg-transparent"
+      }`}
     >
       <div className="flex justify-between items-center">
         <div className="text-2xl font-bold flex items-center">
@@ -30,7 +47,11 @@ export default function Navbar() {
           />
         </div>
 
-        <div className="hidden md:flex items-center space-x-6 text-[#fffefebd] text-[15px]">
+        <div
+          className={`hidden md:flex items-center space-x-6 font-semibold text-[15px] ${
+            scrolled ? "text-black" : "text-[#fffefebd]"
+          }`}
+        >
           <Link
             href="/"
             className="hover:text-[#4370F3] transition-colors px-2"
@@ -38,7 +59,7 @@ export default function Navbar() {
             Home
           </Link>
           <Link
-            href="/services"
+            href="/consulting-services"
             className="hover:text-[#4370F3] transition-colors px-2"
           >
             Consulting Services
@@ -57,7 +78,7 @@ export default function Navbar() {
             About
           </Link>
           <Link
-            href="/contact"
+            href="/contact-us"
             className="hover:text-[#4370F3] transition-colors px-2"
           >
             Contact
@@ -66,7 +87,7 @@ export default function Navbar() {
             <Link
               href="#"
               onClick={openCalendly}
-              className="bg-white text-black px-6 py-5 text-sm hover:text-[#4370F3] transition-colors"
+              className="bg-[#27A1F6] text-black px-6 py-5 text-sm hover:bg-[#4370F3] transition-colors"
             >
               BOOK A FREE CONSULTING CALL
             </Link>

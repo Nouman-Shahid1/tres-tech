@@ -2,8 +2,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["randomuser.me"], // Allow images from randomuser.me
+    domains: ["randomuser.me", "images.unsplash.com"],
   },
 };
 
-export default nextConfig; // This is how you should export it
+export default nextConfig;

@@ -33,7 +33,7 @@ export default function Home() {
             "url('https://websitedemos.net/business-consultancy-firm-04/wp-content/uploads/sites/882/2021/06/hero-free-img.jpg')",
         }}
       >
-        <Navbar />
+        {/* <Navbar /> */}
 
         <div className="absolute inset-0 bg-black opacity-50"></div>
 

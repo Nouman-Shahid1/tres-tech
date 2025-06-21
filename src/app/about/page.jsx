@@ -368,7 +368,8 @@ const AboutUs = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl mb-8">
-            Let's discuss how TechNeon can help you achieve your digital goals.
+            Let&apos;s discuss how TechNeon can help you achieve your digital
+            goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-[#27A1F6] hover:bg-gray-100 font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">

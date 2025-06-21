@@ -267,8 +267,8 @@ const SuccessStories = () => {
                 </div>
               </div>
               <p className="text-gray-700 italic mb-6">
-                "TechNeon's e-commerce platform transformed our online sales.
-                Their team understood our vision and delivered beyond
+                "TechNeon&apos;s e-commerce platform transformed our online
+                sales. Their team understood our vision and delivered beyond
                 expectations. The 240% increase in sales speaks for itself."
               </p>
               <div className="flex">
@@ -338,8 +338,9 @@ const SuccessStories = () => {
               </div>
               <p className="text-gray-700 italic mb-6">
                 "The supply chain optimization platform delivered $12M in annual
-                savings. TechNeon's expertise in AI and logistics was evident
-                throughout the project. Exceptional results and partnership."
+                savings. TechNeon&apos;s expertise in AI and logistics was
+                evident throughout the project. Exceptional results and
+                partnership."
               </p>
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
@@ -365,7 +366,7 @@ const SuccessStories = () => {
             Ready to Write Your Success Story?
           </h2>
           <p className="text-xl mb-8">
-            Let's discuss how we can help you achieve remarkable results.
+            Let&apos;s discuss how we can help you achieve remarkable results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-[#27A1F6] hover:bg-gray-100 font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">

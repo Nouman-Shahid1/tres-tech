@@ -60,7 +60,7 @@ const ContactUs = () => {
               </span>
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-              Let's Build <span className="text-blue-300">Something</span>{" "}
+              Let&apos;s Build <span className="text-blue-300">Something</span>{" "}
               Amazing Together
             </h1>
             <p className="text-lg md:text-xl mb-8 opacity-90 max-w-lg">

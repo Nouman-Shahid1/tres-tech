@@ -34,7 +34,7 @@ function Footer() {
         {/* Right side - Content */}
         <div className="w-full lg:w-1/2 px-6 lg:px-24 py-16">
           <h4 className="text-[#27A1F6] uppercase text-sm font-semibold tracking-widest mb-4">
-            Let's Connect
+            Let&apos;s Connect
           </h4>
           <h2 className="text-[45px] font-bold leading-tight text-gray-900 mb-6">
             Ready to discuss your project?

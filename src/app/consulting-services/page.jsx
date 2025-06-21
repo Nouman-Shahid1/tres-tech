@@ -265,7 +265,7 @@ const ConsultingServices = () => {
               Benefits of Our Consulting Services
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Partner with us to unlock your business's full potential.
+              Partner with us to unlock your business&apos;s full potential.
             </p>
           </div>
 

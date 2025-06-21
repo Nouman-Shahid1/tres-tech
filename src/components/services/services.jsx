@@ -1,5 +1,13 @@
-import { Poppins } from "next/font/google";
-import { Open_Sans } from "next/font/google";
+import { Poppins, Open_Sans } from "next/font/google";
+import {
+  FiTrendingUp,
+  FiDollarSign,
+  FiBarChart2,
+  FiTarget,
+  FiCpu,
+  FiUsers as FiTeam,
+} from "react-icons/fi";
+import { FaLinkedinIn, FaTwitter, FaGithub } from "react-icons/fa";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -7,103 +15,121 @@ const poppins = Poppins({
   style: ["normal"],
   variable: "--font-poppins",
 });
+
 const openSans = Open_Sans({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
   style: ["normal", "italic"],
   variable: "--font-open-sans",
 });
+
 const services = [
   {
-    title: "Business Consulting",
+    title: "Business Strategy",
     description:
-      "We assist businesses in enhancing performance, identifying growth opportunities, and implementing strategic plans to drive success.",
-    image:
-      "https://websitedemos.net/business-consultancy-firm-04/wp-content/uploads/sites/882/2021/06/icon-04-free-img.png",
+      "Develop winning strategies to outperform competitors and achieve sustainable growth in your market.",
+    icon: <FiTrendingUp className="w-8 h-8 text-[#27A1F6]" />,
   },
   {
-    title: "Financial Consulting",
+    title: "Financial Advisory",
     description:
-      "Our experts help you manage finances, reduce costs, and increase profitability through tailored financial strategies.",
-    image:
-      "https://websitedemos.net/business-consultancy-firm-04/wp-content/uploads/sites/882/2021/06/icon-05-free-img.png",
+      "Expert guidance to optimize your financial operations, reduce costs, and maximize profitability.",
+    icon: <FiDollarSign className="w-8 h-8 text-[#27A1F6]" />,
   },
   {
-    title: "Sales & Marketing",
+    title: "Market Expansion",
     description:
-      "We offer innovative marketing strategies and sales solutions to improve customer acquisition and brand visibility.",
-    image:
-      "https://websitedemos.net/business-consultancy-firm-04/wp-content/uploads/sites/882/2021/06/icon-01-free-img.png",
+      "Data-driven approaches to enter new markets and increase your customer base effectively.",
+    icon: <FiBarChart2 className="w-8 h-8 text-[#27A1F6]" />,
   },
   {
-    title: "Productivity Improvement",
+    title: "Operational Excellence",
     description:
-      "Maximize team efficiency and operational output with our productivity audits and optimization practices.",
-    image:
-      "https://websitedemos.net/business-consultancy-firm-04/wp-content/uploads/sites/882/2021/06/icon-06-free-img.png",
+      "Streamline processes and boost productivity with our operational optimization frameworks.",
+    icon: <FiTarget className="w-8 h-8 text-[#27A1F6]" />,
   },
   {
-    title: "Technology Consulting",
+    title: "Digital Transformation",
     description:
-      "Leverage modern tech solutions with our guidance in IT infrastructure, digital transformation, and automation.",
-    image:
-      "https://websitedemos.net/business-consultancy-firm-04/wp-content/uploads/sites/882/2021/06/icon-02-free-img.png",
+      "Modernize your business with cutting-edge technology solutions tailored to your needs.",
+    icon: <FiCpu className="w-8 h-8 text-[#27A1F6]" />,
   },
   {
-    title: "HR Consulting",
+    title: "Talent Optimization",
     description:
-      "Enhance workforce management through recruitment strategies, compliance solutions, and HR policy development.",
-    image:
-      "https://websitedemos.net/business-consultancy-firm-04/wp-content/uploads/sites/882/2021/06/icon-03-free-img.png",
+      "Build high-performing teams with our HR strategies and organizational development expertise.",
+    icon: <FiTeam className="w-8 h-8 text-[#27A1F6]" />,
   },
 ];
 
 const ConsultingServices = () => {
   return (
-    <section className="bg-[#F7F7F7] py-28 pt-48 px-4 lg:px-36">
-      <p
-        className={`text-[#27A1F6] text-[15px] uppercase font-semibold tracking-widest mb-3 ${poppins.variable} `}
-      >
-        What We Do
-      </p>
-      <h2
-        className={`text-[45px] font-bold leading-tight text-gray-900 mb-24 ${poppins.variable}`}
-      >
-        Consulting Services
-      </h2>
+    <section className="py-20 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 bg-gray-50">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <span className="inline-block bg-blue-100 text-[#27A1F6] px-4 py-2 rounded-full text-sm font-medium mb-4">
+            OUR EXPERTISE
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Comprehensive Consulting Services
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            We deliver measurable results through tailored solutions designed
+            for your unique business challenges.
+          </p>
+        </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-        {services.map((service, index) => (
-          <div key={index} className="text-left h-full">
-            <div className="flex flex-col h-full">
-              <div className="mb-4">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-28 h-28 object-contain"
-                />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="group bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 hover:border-blue-100"
+            >
+              <div className="mb-6 flex items-center justify-center w-16 h-16 bg-blue-50 rounded-full group-hover:bg-blue-100 transition-colors">
+                {service.icon}
               </div>
-              <h2
-                className={`text-[20px] ${poppins.variable} font-normal text-black text-left mb-2`}
-              >
+              <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-[#27A1F6] transition-colors">
                 {service.title}
-              </h2>
-              <p
-                className={`text-[15px] text-gray-600 mb-4 ${openSans.className}`}
-              >
-                {service.description}
-              </p>
-              <div className="mt-auto">
-                <a
-                  href="#"
-                  className={`text-[15px] font-normal text-[#27A1F6]/90 ${openSans.className} text-left hover:text-[#4370F3]`}
+              </h3>
+              <p className="text-gray-600 mb-6">{service.description}</p>
+              <div className="flex items-center text-[#27A1F6] font-medium group-hover:text-[#4370F3] transition-colors">
+                <span>Discover how</span>
+                <svg
+                  className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
                 >
-                  Read More
-                </a>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  ></path>
+                </svg>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+
+        <div className="mt-16 text-center">
+          <button className="bg-[#27A1F6] hover:bg-[#4370F3] text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl inline-flex items-center">
+            <span>Explore All Services</span>
+            <svg
+              className="w-4 h-4 ml-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              ></path>
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
   );

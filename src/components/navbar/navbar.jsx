@@ -4,148 +4,133 @@ import Image from "next/image";
 import logo from "../../assests/logo.png";
 import Link from "next/link";
 import { Open_Sans } from "next/font/google";
+import { FiMenu, FiX, FiArrowRight } from "react-icons/fi";
+
 const openSans = Open_Sans({
   subsets: ["latin"],
-  weight: ["400", "600", "700"], // Include weights you need
-  style: ["normal", "italic"], // Optional
-  variable: "--font-open-sans", // CSS variable name
+  weight: ["400", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-open-sans",
 });
+
 export default function Navbar() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
   const openCalendly = () => {
     window.open("https://calendly.com/muhammadnoumansha140", "_blank");
   };
+
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "Consulting Services", href: "/consulting-services" },
+    { name: "Success Stories", href: "/success" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact-us" },
+  ];
+
   return (
     <nav
-      className={`${
-        openSans.className
-      } fixed top-0 left-0 right-0 z-50 px-6 font-sans text-sm font-semibold transition-all duration-300 ${
-        scrolled ? "bg-[#F7F7F7]" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"
+      } ${openSans.className}`}
     >
-      <div className="flex justify-between items-center">
-        <div className="text-2xl font-bold flex items-center">
-          <Image
-            src={logo}
-            alt="Logo"
-            width={180}
-            height={20}
-            className="object-contain h-24 "
-          />
-        </div>
-
-        <div
-          className={`hidden md:flex items-center space-x-6 font-semibold text-[15px] ${
-            scrolled ? "text-black" : "text-[#fffefebd]"
-          }`}
-        >
-          <Link
-            href="/"
-            className="hover:text-[#4370F3] transition-colors px-2"
-          >
-            Home
-          </Link>
-          <Link
-            href="/consulting-services"
-            className="hover:text-[#4370F3] transition-colors px-2"
-          >
-            Consulting Services
-          </Link>
-
-          <Link
-            href="/success"
-            className="hover:text-[#4370F3] transition-colors px-2"
-          >
-            Success Stories
-          </Link>
-          <Link
-            href="/about"
-            className="hover:text-[#4370F3] transition-colors px-2"
-          >
-            About
-          </Link>
-          <Link
-            href="/contact-us"
-            className="hover:text-[#4370F3] transition-colors px-2"
-          >
-            Contact
-          </Link>
-          <div className="hidden md:block ml-6">
-            <Link
-              href="#"
-              onClick={openCalendly}
-              className="bg-[#27A1F6] text-black px-6 py-5 text-sm hover:bg-[#4370F3] transition-colors"
-            >
-              BOOK A FREE CONSULTING CALL
-            </Link>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Image
+              src={logo}
+              alt="Logo"
+              width={scrolled ? 140 : 180}
+              height={scrolled ? 40 : 60}
+              className="transition-all duration-300 object-contain"
+            />
           </div>
-        </div>
 
-        <div className="md:hidden">
-          <button
-            className="text-white focus:outline-none"
-            onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              className="w-6 h-6"
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className={`${
+                  scrolled ? "text-gray-800" : "text-white"
+                } font-semibold hover:text-[#4370F3] transition-colors duration-200 relative group`}
+              >
+                {link.name}
+                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#27A1F6] transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+            ))}
+            <button
+              onClick={openCalendly}
+              className={`ml-6 px-6 py-3 rounded-full font-bold text-sm transition-all duration-300 ${
+                scrolled
+                  ? "bg-[#27A1F6] text-white hover:bg-[#4370F3]"
+                  : "bg-white text-[#27A1F6] hover:bg-gray-100"
+              } shadow-lg hover:shadow-xl hover:translate-y-[-2px] flex items-center`}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
-          </button>
+              FREE CONSULTATION
+              <FiArrowRight className="ml-2" />
+            </button>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden flex items-center">
+            <button
+              onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
+              className={`inline-flex items-center justify-center p-2 rounded-md focus:outline-none ${
+                scrolled ? "text-gray-800" : "text-white"
+              }`}
+            >
+              {isMobileMenuOpen ? (
+                <FiX className="h-6 w-6" />
+              ) : (
+                <FiMenu className="h-6 w-6" />
+              )}
+            </button>
+          </div>
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-gray-900 text-white mt-4 rounded-lg">
-          <Link href="/" className="block px-4 py-3 hover:bg-gray-800">
-            Home
-          </Link>
-          <Link href="/services" className="block px-4 py-3 hover:bg-gray-800">
-            Consulting Services
-          </Link>
-          <Link href="/training" className="block px-4 py-3 hover:bg-gray-800">
-            Training
-          </Link>
-          <Link href="/insights" className="block px-4 py-3 hover:bg-gray-800">
-            Insights
-          </Link>
-          <Link href="/success" className="block px-4 py-3 hover:bg-gray-800">
-            Success Stories
-          </Link>
-          <Link href="/about" className="block px-4 py-3 hover:bg-gray-800">
-            About
-          </Link>
-          <Link href="/contact" className="block px-4 py-3 hover:bg-gray-800">
-            Contact
-          </Link>
-          <Link
-            href="#"
-            className="block px-4 py-3 bg-red-600 hover:bg-red-700 rounded-b-lg"
-          >
-            BOOK A FREE CONSULTING CALL
-          </Link>
+        <div
+          className={`md:hidden fixed inset-0 bg-white z-40 mt-16 transition-all duration-300 ${
+            isMobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+          }`}
+        >
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="block px-3 py-4 text-lg font-medium text-gray-800 hover:bg-gray-100 rounded-md transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {link.name}
+              </Link>
+            ))}
+            <button
+              onClick={() => {
+                openCalendly();
+                setMobileMenuOpen(false);
+              }}
+              className="w-full mt-4 px-6 py-4 bg-gradient-to-r from-[#27A1F6] to-[#4370F3] text-white font-bold rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all"
+            >
+              FREE CONSULTATION
+              <FiArrowRight className="ml-2" />
+            </button>
+          </div>
         </div>
       )}
     </nav>

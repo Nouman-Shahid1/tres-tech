@@ -392,7 +392,7 @@ const ContactUs = () => {
                 Techneon Headquarters
               </h3>
               <p className="text-gray-600 mb-3">
-                123 Tech Park Avenue, Silicon Valley, CA 94025, United States
+                5900 BALCONES DR STE 100 AUSTIN TX 78731-4298, United States
               </p>
               <button className="bg-blue-600 text-white py-2 px-6 rounded-lg text-sm font-medium">
                 Get Directions

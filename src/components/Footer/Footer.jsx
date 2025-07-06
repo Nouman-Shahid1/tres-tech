@@ -309,12 +309,12 @@ function Footer() {
                 </Link>
               </div>
             </div>
-            <div className=" p-8">
+            <div>
               <h4 className="text-xl font-bold text-white mb-8 text-center tracking-wide">
                 PAYMENT METHODS
               </h4>
 
-              <div className="flex flex-row gap-6">
+              <div className="flex flex-row flex-wrap gap-6">
                 <div className="flex flex-col items-center group">
                   <div className="p-3 rounded-lg group-hover:bg-gray-700 transition-all duration-300">
                     <FaCcVisa className="text-4xl text-[#1A1F71] group-hover:text-[#5A8CFF]" />

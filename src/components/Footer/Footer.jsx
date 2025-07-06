@@ -181,9 +181,9 @@ function Footer() {
                 <div className="flex items-start gap-3">
                   <FiMapPin className="text-[#27A1F6] mt-0.5" />
                   <span className="text-white/50 text-sm">
-                    123 Business Ave, Suite 100
+                    5900 BALCONES DR STE 100
                     <br />
-                    New York, NY 10001
+                    AUSTIN TX 78731-4298
                   </span>
                 </div>
               </div>

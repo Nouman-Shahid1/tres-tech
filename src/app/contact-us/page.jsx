@@ -23,7 +23,6 @@ import Footer from "@/components/Footer/Footer";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["100", "400", "700"],
-  style: ["normal"],
   variable: "--font-poppins",
   display: "swap",
 });
@@ -157,7 +156,7 @@ const ContactUs = () => {
               </div>
               <h3 className="text-xl font-bold mb-3">Our Headquarters</h3>
               <p className="text-gray-600 mb-4">
-                123 Tech Park Avenue, Silicon Valley, CA 94025, United States
+                5900 BALCONES DR STE 100 AUSTIN TX 78731-4298, United States
               </p>
               <a
                 href="#"
@@ -373,7 +372,7 @@ const ContactUs = () => {
       {/* Interactive Map Section */}
       <section className="relative h-[600px] w-full bg-gray-100">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.465434032985!2d-122.0862469246896!3d37.42199987207478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fba02425dad8f%3A0x6c296c66619367e0!2sGoogleplex!5e0!3m2!1sen!2sus!4v1689874323456!5m2!1sen!2sus"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3474.1556543373754!2d-97.75227092482324!3d30.352605474752065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644ca2a9915ef2b%3A0xa7449607eb288fb3!2s5900%20Balcones%20Dr%20%23100%2C%20Austin%2C%20TX%2078731%2C%20USA!5e0!3m2!1sen!2sus!4v1720248561585!5m2!1sen!2sus"
           width="100%"
           height="100%"
           style={{ border: 0 }}
@@ -381,7 +380,8 @@ const ContactUs = () => {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           className="absolute inset-0"
-        ></iframe>
+        />
+
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 bg-white rounded-xl shadow-2xl p-6 w-11/12 max-w-md">
           <div className="flex items-start gap-4">
             <div className="bg-blue-100 p-3 rounded-full flex-shrink-0">

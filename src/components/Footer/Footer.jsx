@@ -11,9 +11,20 @@ import {
   FiMail,
   FiMapPin,
   FiPhone,
+  FiShield,
   FiTwitter,
 } from "react-icons/fi";
 
+import {
+  FaCcVisa,
+  FaCcMastercard,
+  FaCcDiscover,
+  FaCcAmex,
+  FaApplePay,
+  FaPaypal,
+} from "react-icons/fa";
+import { SiGooglepay, SiStripe } from "react-icons/si";
+import { FiLock } from "react-icons/fi";
 function Footer() {
   const openCalendly = () => {
     window.open("https://calendly.com/muhammadnoumansha140", "_blank");
@@ -136,7 +147,7 @@ function Footer() {
           </button>
         </div>
       </section>
-      <footer className="w-full bg-gray-50 border-t border-gray-200">
+      <footer className="w-full bg-black border-t border-gray-200">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Main Footer Content */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 py-12">
@@ -146,12 +157,10 @@ function Footer() {
                 <Image
                   src={logo}
                   alt="Techneon Logo"
-                  width={180}
-                  height={40}
-                  className="h-12 w-auto object-contain"
+                  className="h-24 w-auto object-contain"
                 />
               </Link>
-              <p className="text-gray-600 text-sm leading-relaxed max-w-md">
+              <p className="text-white/50 text-sm leading-relaxed max-w-md">
                 We provide expert consulting services to help businesses grow
                 and succeed. Partner with us for strategic solutions tailored to
                 your needs.
@@ -159,19 +168,19 @@ function Footer() {
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <FiPhone className="text-[#27A1F6] mt-0.5" />
-                  <span className="text-gray-600 text-sm">
+                  <span className="text-white/50 text-sm">
                     +1 (555) 123-4567
                   </span>
                 </div>
                 <div className="flex items-start gap-3">
                   <FiMail className="text-[#27A1F6] mt-0.5" />
-                  <span className="text-gray-600 text-sm">
+                  <span className="text-white/50 text-sm">
                     info@techneon.com
                   </span>
                 </div>
                 <div className="flex items-start gap-3">
                   <FiMapPin className="text-[#27A1F6] mt-0.5" />
-                  <span className="text-gray-600 text-sm">
+                  <span className="text-white/50 text-sm">
                     123 Business Ave, Suite 100
                     <br />
                     New York, NY 10001
@@ -182,14 +191,12 @@ function Footer() {
 
             {/* Quick Links */}
             <div className="space-y-4">
-              <h4 className="text-lg font-semibold text-gray-900">
-                Quick Links
-              </h4>
+              <h4 className="text-lg font-semibold text-white">Quick Links</h4>
               <ul className="space-y-3">
                 <li>
                   <Link
                     href="/"
-                    className="text-gray-600 hover:text-[#4370F3] text-sm transition-colors flex items-center group"
+                    className="text-white/50 hover:text-[#4370F3] text-sm transition-colors flex items-center group"
                   >
                     <FiArrowRight className="mr-2 text-[#27A1F6] opacity-0 group-hover:opacity-100 transition-opacity" />
                     Home
@@ -198,7 +205,7 @@ function Footer() {
                 <li>
                   <Link
                     href="/about"
-                    className="text-gray-600 hover:text-[#4370F3] text-sm transition-colors flex items-center group"
+                    className="text-white/50 hover:text-[#4370F3] text-sm transition-colors flex items-center group"
                   >
                     <FiArrowRight className="mr-2 text-[#27A1F6] opacity-0 group-hover:opacity-100 transition-opacity" />
                     About Us
@@ -207,7 +214,7 @@ function Footer() {
                 <li>
                   <Link
                     href="/consulting-services"
-                    className="text-gray-600 hover:text-[#4370F3] text-sm transition-colors flex items-center group"
+                    className="text-white/50 hover:text-[#4370F3] text-sm transition-colors flex items-center group"
                   >
                     <FiArrowRight className="mr-2 text-[#27A1F6] opacity-0 group-hover:opacity-100 transition-opacity" />
                     Consulting Services
@@ -216,7 +223,7 @@ function Footer() {
                 <li>
                   <Link
                     href="/success"
-                    className="text-gray-600 hover:text-[#4370F3] text-sm transition-colors flex items-center group"
+                    className="text-white/50 hover:text-[#4370F3] text-sm transition-colors flex items-center group"
                   >
                     <FiArrowRight className="mr-2 text-[#27A1F6] opacity-0 group-hover:opacity-100 transition-opacity" />
                     Success Stories
@@ -225,7 +232,7 @@ function Footer() {
                 <li>
                   <Link
                     href="/contact-us"
-                    className="text-gray-600 hover:text-[#4370F3] text-sm transition-colors flex items-center group"
+                    className="text-white/50 hover:text-[#4370F3] text-sm transition-colors flex items-center group"
                   >
                     <FiArrowRight className="mr-2 text-[#27A1F6] opacity-0 group-hover:opacity-100 transition-opacity" />
                     Contact Us
@@ -236,18 +243,18 @@ function Footer() {
 
             {/* Service Areas */}
             <div className="space-y-4">
-              <h4 className="text-lg font-semibold text-gray-900">
+              <h4 className="text-lg font-semibold text-white">
                 Service Areas
               </h4>
               <ul className="space-y-3">
-                <li className="text-gray-600 text-sm">Business Strategy</li>
-                <li className="text-gray-600 text-sm">Process Optimization</li>
-                <li className="text-gray-600 text-sm">Technology Consulting</li>
-                <li className="text-gray-600 text-sm">
+                <li className="text-white/50 text-sm">Business Strategy</li>
+                <li className="text-white/50 text-sm">Process Optimization</li>
+                <li className="text-white/50 text-sm">Technology Consulting</li>
+                <li className="text-white/50 text-sm">
                   Digital Transformation
                 </li>
-                <li className="text-gray-600 text-sm">Market Expansion</li>
-                <li className="text-gray-600 text-sm">
+                <li className="text-white/50 text-sm">Market Expansion</li>
+                <li className="text-white/50 text-sm">
                   Operational Excellence
                 </li>
               </ul>
@@ -255,17 +262,17 @@ function Footer() {
 
             {/* Newsletter & Social */}
             <div className="space-y-4">
-              <h4 className="text-lg font-semibold text-gray-900">
+              <h4 className="text-lg font-semibold text-white">
                 Stay Connected
               </h4>
-              <p className="text-gray-600 text-sm">
+              <p className="text-white/50 text-sm">
                 Get the latest insights and updates directly to your inbox.
               </p>
               <form className="mt-4 flex">
                 <input
                   type="email"
                   placeholder="Your email"
-                  className="px-4 py-2 text-sm w-full border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-[#27A1F6] focus:border-transparent"
+                  className="px-4 py-2 text-sm text-white w-full border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-[#27A1F6] focus:border-transparent"
                   required
                 />
                 <button
@@ -302,7 +309,88 @@ function Footer() {
                 </Link>
               </div>
             </div>
+            <div className=" p-8">
+              <h4 className="text-xl font-bold text-white mb-8 text-center tracking-wide">
+                PAYMENT METHODS
+              </h4>
+
+              <div className="flex flex-row gap-6">
+                <div className="flex flex-col items-center group">
+                  <div className="p-3 rounded-lg group-hover:bg-gray-700 transition-all duration-300">
+                    <FaCcVisa className="text-4xl text-[#1A1F71] group-hover:text-[#5A8CFF]" />
+                  </div>
+                  <span className="mt-2 text-xs text-gray-400 group-hover:text-white transition-colors">
+                    Visa
+                  </span>
+                </div>
+
+                <div className="flex flex-col items-center group">
+                  <div className="p-3 rounded-lg group-hover:bg-gray-700 transition-all duration-300">
+                    <FaCcMastercard className="text-4xl text-[#EB001B] group-hover:text-[#FF6B6B]" />
+                  </div>
+                  <span className="mt-2 text-xs text-gray-400 group-hover:text-white transition-colors">
+                    Mastercard
+                  </span>
+                </div>
+
+                <div className="flex flex-col items-center group">
+                  <div className="p-3 rounded-lg group-hover:bg-gray-700 transition-all duration-300">
+                    <FaCcDiscover className="text-4xl text-[#FF6000] group-hover:text-[#FFA364]" />
+                  </div>
+                  <span className="mt-2 text-xs text-gray-400 group-hover:text-white transition-colors">
+                    Discover
+                  </span>
+                </div>
+
+                <div className="flex flex-col items-center group">
+                  <div className="p-3 rounded-lg group-hover:bg-gray-700 transition-all duration-300">
+                    <FaCcAmex className="text-4xl text-[#2E77BB] group-hover:text-[#6BB5FF]" />
+                  </div>
+                  <span className="mt-2 text-xs text-gray-400 group-hover:text-white transition-colors">
+                    Amex
+                  </span>
+                </div>
+
+                {/* Digital Payments Row */}
+                <div className="flex flex-col items-center group">
+                  <div className="p-3 rounded-lg group-hover:bg-gray-700 transition-all duration-300">
+                    <FaApplePay className="text-4xl text-white group-hover:text-gray-300" />
+                  </div>
+                  <span className="mt-2 text-xs text-gray-400 group-hover:text-white transition-colors">
+                    Apple Pay
+                  </span>
+                </div>
+
+                <div className="flex flex-col items-center group">
+                  <div className="p-3 rounded-lg group-hover:bg-gray-700 transition-all duration-300">
+                    <SiGooglepay className="text-4xl text-[#4285F4] group-hover:text-[#8AB4F8]" />
+                  </div>
+                  <span className="mt-2 text-xs text-gray-400 group-hover:text-white transition-colors">
+                    Google Pay
+                  </span>
+                </div>
+
+                <div className="flex flex-col items-center group">
+                  <div className="p-3 rounded-lg group-hover:bg-gray-700 transition-all duration-300">
+                    <FaPaypal className="text-4xl text-[#003087] group-hover:text-[#009CDE]" />
+                  </div>
+                  <span className="mt-2 text-xs text-gray-400 group-hover:text-white transition-colors">
+                    PayPal
+                  </span>
+                </div>
+
+                <div className="flex flex-col items-center group">
+                  <div className="p-3 rounded-lg group-hover:bg-gray-700 transition-all duration-300">
+                    <SiStripe className="text-4xl text-[#635BFF] group-hover:text-[#A39CFF]" />
+                  </div>
+                  <span className="mt-2 text-xs text-gray-400 group-hover:text-white transition-colors">
+                    Stripe
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
+          {/* Payment Methods */}
 
           {/* Footer Bottom */}
           <div className="border-t border-gray-200 py-6">
@@ -313,19 +401,19 @@ function Footer() {
               <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
                 <Link
                   href="/"
-                  className="text-gray-600 hover:text-[#4370F3] text-sm transition-colors"
+                  className="text-white/50 hover:text-[#4370F3] text-sm transition-colors"
                 >
                   Privacy Policy
                 </Link>
                 <Link
                   href="/"
-                  className="text-gray-600 hover:text-[#4370F3] text-sm transition-colors"
+                  className="text-white/50 hover:text-[#4370F3] text-sm transition-colors"
                 >
                   Terms of Service
                 </Link>
                 <Link
                   href="/"
-                  className="text-gray-600 hover:text-[#4370F3] text-sm transition-colors"
+                  className="text-white/50 hover:text-[#4370F3] text-sm transition-colors"
                 >
                   Cookie Policy
                 </Link>

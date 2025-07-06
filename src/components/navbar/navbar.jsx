@@ -41,7 +41,7 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"
+        scrolled ? "bg-[#365479] shadow-md py-2" : "bg-transparent py-4"
       } ${openSans.className}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -51,8 +51,8 @@ export default function Navbar() {
             <Image
               src={logo}
               alt="Logo"
-              width={scrolled ? 140 : 180}
-              height={scrolled ? 40 : 60}
+              width={scrolled ? 100 : 140}
+              height={scrolled ? 30 : 40}
               className="transition-all duration-300 object-contain"
             />
           </div>
@@ -64,7 +64,7 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 className={`${
-                  scrolled ? "text-gray-800" : "text-white"
+                  scrolled ? "text-white" : "text-white"
                 } font-semibold hover:text-[#4370F3] transition-colors duration-200 relative group`}
               >
                 {link.name}

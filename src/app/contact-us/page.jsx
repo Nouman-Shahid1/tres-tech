@@ -93,10 +93,10 @@ const ContactUs = () => {
               <div>
                 <h3 className="font-bold text-gray-700">Emergency Support</h3>
                 <a
-                  href="tel:+18005551234"
+                  href="tel:+15719465617"
                   className="text-blue-600 hover:text-blue-800 font-medium"
                 >
-                  +1 (800) 555-1234
+                  +1 (571) 946-5617
                 </a>
               </div>
             </div>
@@ -174,10 +174,10 @@ const ContactUs = () => {
               <h3 className="text-xl font-bold mb-3">Phone Support</h3>
               <p className="text-gray-600 mb-2">
                 <a
-                  href="tel:+18005551234"
+                  href="tel:+15719465617"
                   className="hover:text-blue-600 font-medium"
                 >
-                  +1 (800) 555-1234
+                  +1 (571) 946-5617
                 </a>
               </p>
               <p className="text-gray-600 mb-4">

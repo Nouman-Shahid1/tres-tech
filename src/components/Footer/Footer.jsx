@@ -169,7 +169,7 @@ function Footer() {
                 <div className="flex items-start gap-3">
                   <FiPhone className="text-[#27A1F6] mt-0.5" />
                   <span className="text-white/50 text-sm">
-                    +1 (555) 123-4567
+                    +1 (571) 946-5617
                   </span>
                 </div>
                 <div className="flex items-start gap-3">

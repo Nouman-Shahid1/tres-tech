@@ -20,6 +20,7 @@ import {
 } from "react-icons/fa";
 import { SiNextdotjs, SiTypescript, SiTailwindcss } from "react-icons/si";
 import Footer from "@/components/Footer/Footer";
+import ConsultingServices from "@/components/about services/services";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -61,9 +62,9 @@ const AboutUs = () => {
               Crafting the <span className="text-blue-300">Digital</span> Future
             </h1>
             <p className="text-lg md:text-xl mb-8 opacity-90 max-w-lg">
-              TechNeon is a leading technology company dedicated to building
-              cutting-edge solutions that transform businesses and empower
-              communities.
+              Tres Tech Global is a leading technology company dedicated to
+              building cutting-edge solutions that transform businesses and
+              empower communities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
@@ -78,7 +79,7 @@ const AboutUs = () => {
       </section>
 
       {/* Our Story Section */}
-      <section className="py-28 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 bg-gray-50">
+      <section className="py-28 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 bg-black">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative h-full min-h-[500px] rounded-2xl overflow-hidden shadow-xl">
@@ -89,7 +90,7 @@ const AboutUs = () => {
                 className="object-cover"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-800/80 to-gray-600/60 flex items-end p-8">
+              {/* <div className="absolute inset-0 bg-gradient-to-t from-gray-800/80 to-gray-600/60 flex items-end p-8">
                 <div className="text-white">
                   <h3 className="text-3xl font-bold mb-4">
                     Our Humble Beginnings
@@ -98,52 +99,58 @@ const AboutUs = () => {
                     Founded in 2015 with just 3 people in a small garage.
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
             <div>
-              <span className="inline-block bg-blue-100 text-[#27A1F6] px-4 py-2 rounded-full text-sm font-medium mb-4">
+              {/* <span className="inline-block bg-blue-100 text-[#27A1F6] px-4 py-2 rounded-full text-sm font-medium mb-4">
                 OUR STORY
-              </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#4370F3] mb-6">
+              </span> */}
+              <h2 className="text-3xl md:text-4xl font-bold text-[#f0a709] mb-6">
                 From Startup to{" "}
-                <span className="text-blue-500">Industry Leader</span>
+                <span className="text-[#f0a709]">Industry Leader</span>
               </h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-lg text-white mb-6">
                 What began as a small team with big dreams has grown into an
                 award-winning technology company serving clients worldwide.
               </p>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="bg-blue-100 p-3 rounded-full flex-shrink-0">
-                    <FiTrendingUp className="text-[#27A1F6] text-xl" />
+                  <div className="bg-[#645024] p-3 rounded-full flex-shrink-0">
+                    <FiTrendingUp className="text-[#f0a709] text-xl" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">Rapid Growth</h3>
-                    <p className="text-gray-600">
+                    <h3 className="text-xl font-bold mb-2 text-[#f0a709]">
+                      Rapid Growth
+                    </h3>
+                    <p className="text-white">
                       Expanded from 3 to 150+ employees in just 5 years, with
                       offices in 3 countries.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="bg-blue-100 p-3 rounded-full flex-shrink-0">
-                    <FiAward className="text-[#27A1F6] text-xl" />
+                  <div className="bg-[#645024] p-3 rounded-full flex-shrink-0">
+                    <FiAward className="text-[#f0a709] text-xl" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">Award Winning</h3>
-                    <p className="text-gray-600">
+                    <h3 className="text-xl font-bold mb-2 text-[#f0a709]">
+                      Award Winning
+                    </h3>
+                    <p className="text-white">
                       Recognized by TechCrunch, Forbes, and Gartner for our
                       innovative solutions.
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="bg-blue-100 p-3 rounded-full flex-shrink-0">
-                    <FiGlobe className="text-[#27A1F6] text-xl" />
+                  <div className="bg-[#645024] p-3 rounded-full flex-shrink-0">
+                    <FiGlobe className="text-[#f0a709] text-xl" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">Global Impact</h3>
-                    <p className="text-gray-600">
+                    <h3 className="text-xl font-bold mb-2 text-[#f0a709]">
+                      Global Impact
+                    </h3>
+                    <p className="text-white">
                       Our technologies power businesses in over 30 countries
                       across 5 continents.
                     </p>
@@ -154,7 +161,7 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-
+      <ConsultingServices />
       {/* Mission & Values */}
       <section className="py-20 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 bg-white">
         <div className="max-w-7xl mx-auto">

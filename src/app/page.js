@@ -23,6 +23,7 @@ import {
 } from "react-icons/fa";
 import { SiNextdotjs, SiTypescript, SiTailwindcss } from "react-icons/si";
 import Link from "next/link";
+import TestimonialSlider from "@/components/testimonial/testimonial";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -127,13 +128,13 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <button
                 onClick={openCalendly}
-                className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 lg:py-4 lg:px-8 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
+                className="bg-white text-[#f0a709] hover:bg-[#f0a709] hover:text-black font-bold py-3 px-6 lg:py-4 lg:px-8 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
               >
                 <span>Get Started</span>
               </button>
               <Link
                 href="/contact-us"
-                className="bg-transparent border-2 border-white hover:bg-white/10 text-white font-bold py-3 px-6 lg:py-4 lg:px-8 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                className="bg-transparent border-2 border-white hover:bg-white/10 text-white  hover:text-[#f0a709] hover:border-[#f0a709] font-bold py-3 px-6 lg:py-4 lg:px-8 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
               >
                 <span>Learn More</span>
               </Link>
@@ -176,8 +177,8 @@ export default function Home() {
               </p>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="bg-[#645024] p-3 rounded-full flex-shrink-0">
-                    <FiTrendingUp className="text-[#f0a709] text-xl" />
+                  <div className="bg-[#f0a709] p-3 rounded-full flex-shrink-0">
+                    <FiTrendingUp className="text-[#fff] text-xl" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2 text-[#f0a709] ">
@@ -190,8 +191,8 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="bg-[#645024] p-3 rounded-full flex-shrink-0">
-                    <FiAward className="text-[#f0a709] text-xl" />
+                  <div className="bg-[#f0a709] p-3 rounded-full flex-shrink-0">
+                    <FiAward className="text-[#fff] text-xl" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2 text-[#f0a709] ">
@@ -204,8 +205,8 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="bg-[#645024] p-3 rounded-full flex-shrink-0">
-                    <FiGlobe className="text-[#f0a709] text-xl" />
+                  <div className="bg-[#f0a709] p-3 rounded-full flex-shrink-0">
+                    <FiGlobe className="text-[#fff] text-xl" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2 text-[#f0a709] ">
@@ -230,13 +231,13 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="inline-block bg-blue-100 text-[#27A1F6] px-4 py-2 rounded-full text-sm font-medium mb-4">
+              {/* <span className="inline-block bg-blue-100 text-[#f0a709] px-4 py-2 rounded-full text-sm font-medium mb-4">
                 CASE STUDY
-              </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#4370F3] mb-6">
+              </span> */}
+              <h2 className="text-3xl md:text-4xl font-bold text-[#f0a709] mb-6">
                 Capital Co. jump-starts growth with return to core strategies
               </h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-lg text-white mb-6">
                 Facing market challenges, Capital Co. achieved significant
                 growth by refocusing on its core business strategies. By
                 returning to its foundational goals, the company streamlined
@@ -244,7 +245,7 @@ export default function Home() {
               </p>
               <button
                 onClick={openCalendly}
-                className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
+                className="bg-white text-[#f0a709] hover:bg-[#f0a709] hover:text-black font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
               >
                 <span>See All Case Studies</span>
               </button>
@@ -337,10 +338,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 bg-gradient-to-r from-blue-600 to-blue-800">
-        <div className="max-w-4xl mx-auto text-center text-white">
+      <section className="py-20 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 bg-[#f0a709]">
+        <div className="max-w-4xl mx-auto text-center text-black">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Transform Your Business?
           </h2>
@@ -350,13 +349,13 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={openCalendly}
-              className="bg-white text-[#27A1F6] hover:bg-gray-100 font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
+              className="bg-black text-[#f0a709] hover:bg-[#fff] hover:text-[#f0a709]] font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
             >
               <span>Schedule Consultation</span>
             </button>
             <Link
               href="/contact-us"
-              className="bg-transparent border-2 border-white hover:bg-white/10 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+              className="bg-transparent border-2 border-white hover:text-black hover hover:bg-white/10 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
             >
               <span>Learn More</span>
             </Link>

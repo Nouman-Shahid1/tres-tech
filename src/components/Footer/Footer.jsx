@@ -32,7 +32,7 @@ function Footer() {
 
   return (
     <>
-      <section className="flex flex-col lg:flex-row items-center bg-[#F7F7F7] min-h-[100vh] gap-6">
+      <section className="flex flex-col lg:flex-row items-center bg-[#000] min-h-[100vh] gap-6">
         {/* Left side - Image */}
         <div
           className="w-full lg:w-1/2 min-h-[100vh] bg-cover bg-center bg-no-repeat"
@@ -44,13 +44,13 @@ function Footer() {
 
         {/* Right side - Content */}
         <div className="w-full lg:w-1/2 px-6 lg:px-24 py-16">
-          <h4 className="text-[#27A1F6] uppercase text-sm font-semibold tracking-widest mb-4">
+          <h4 className="text-[#f0a709] uppercase text-sm font-semibold tracking-widest mb-4">
             Let&apos;s Connect
           </h4>
-          <h2 className="text-[45px] font-bold leading-tight text-gray-900 mb-6">
+          <h2 className="text-[45px] font-bold leading-tight text-[#f0a709] mb-6">
             Ready to discuss your project?
           </h2>
-          <p className="text-gray-600 text-[15px] leading-relaxed mb-8">
+          <p className="text-white text-[15px] leading-relaxed mb-8">
             Schedule a free consultation with our team to explore how we can
             help bring your vision to life. We'll discuss your goals, timeline,
             and budget to create a customized solution that works for you.
@@ -58,7 +58,7 @@ function Footer() {
 
           <div className="space-y-6 mb-10">
             <div className="flex items-start gap-4">
-              <div className="bg-[#27A1F6]  p-2 rounded-full mt-1">
+              <div className="bg-[#f0a709]  p-2 rounded-full mt-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5 text-white"
@@ -75,17 +75,17 @@ function Footer() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900">
+                <h3 className="text-lg font-semibold text-[#f0a709]">
                   30-Minute Free Consultation
                 </h3>
-                <p className="text-gray-600 text-[15px]">
+                <p className="text-white text-[15px]">
                   No obligation, just expert advice
                 </p>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="bg-[#27A1F6]  p-2 rounded-full mt-1">
+              <div className="bg-[#f0a709]  p-2 rounded-full mt-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5 text-white"
@@ -102,17 +102,17 @@ function Footer() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900">
+                <h3 className="text-lg font-semibold text-[#f0a709]">
                   Tailored Solutions
                 </h3>
-                <p className="text-gray-600 text-[15px]">
+                <p className="text-white text-[15px]">
                   Customized approach for your unique needs
                 </p>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="bg-[#27A1F6] p-2 rounded-full mt-1">
+              <div className="bg-[#f0a709] p-2 rounded-full mt-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5 text-white"
@@ -129,22 +129,24 @@ function Footer() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900">
+                <h3 className="text-lg font-semibold text-[#f0a709]">
                   Direct Communication
                 </h3>
-                <p className="text-gray-600 text-[15px]">
+                <p className="text-white text-[15px]">
                   Speak directly with our experts
                 </p>
               </div>
             </div>
           </div>
 
-          <button
-            onClick={openCalendly}
-            className="hover:cursor-pointer text-[12px] inline-block mt-4 bg-[#27A1F6] text-white px-8 py-3 hover:bg-[#4370F3] transition-colors font-bold"
-          >
-            Schedule a Call
-          </button>
+          <div className="flex justify-center">
+            <button
+              onClick={openCalendly}
+              className="hover:cursor-pointer rounded-4xl text-[18px] inline-block mt-4 bg-white text-[#f0a709] hover:bg-[#f0a709] hover:text-white px-8 py-3 w-full transition-colors font-bold"
+            >
+              Schedule a Call
+            </button>
+          </div>
         </div>
       </section>
       <footer className="w-full bg-black border-t border-gray-200">
@@ -167,23 +169,21 @@ function Footer() {
               </p>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
-                  <FiPhone className="text-[#27A1F6] mt-0.5" />
+                  <FiPhone className="text-[#f0a709] mt-0.5" />
+                  <span className="text-white/50 text-sm">+447482527700‬</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <FiMail className="text-[#f0a709] mt-0.5" />
                   <span className="text-white/50 text-sm">
-                    +1 (571) 946-5617
+                    trestech21@gmail.com
                   </span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <FiMail className="text-[#27A1F6] mt-0.5" />
+                  <FiMapPin className="text-[#f0a709] mt-0.5" />
                   <span className="text-white/50 text-sm">
-                    info@techneon.com
-                  </span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <FiMapPin className="text-[#27A1F6] mt-0.5" />
-                  <span className="text-white/50 text-sm">
-                    5900 BALCONES DR STE 100
+                    OFFICE 14082 182-184 HIGH STREET NORTH EAST HAM
                     <br />
-                    AUSTIN TX 78731-4298
+                    LONDON UNITED KINGDOM E6 2JA
                   </span>
                 </div>
               </div>
@@ -196,45 +196,45 @@ function Footer() {
                 <li>
                   <Link
                     href="/"
-                    className="text-white/50 hover:text-[#4370F3] text-sm transition-colors flex items-center group"
+                    className="text-white/50 hover:text-[#f0a709] text-sm transition-colors flex items-center group"
                   >
-                    <FiArrowRight className="mr-2 text-[#27A1F6] opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <FiArrowRight className="mr-2 text-[#f0a709] opacity-0 group-hover:opacity-100 transition-opacity" />
                     Home
                   </Link>
                 </li>
                 <li>
                   <Link
                     href="/about"
-                    className="text-white/50 hover:text-[#4370F3] text-sm transition-colors flex items-center group"
+                    className="text-white/50 hover:text-[#f0a709] text-sm transition-colors flex items-center group"
                   >
-                    <FiArrowRight className="mr-2 text-[#27A1F6] opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <FiArrowRight className="mr-2 text-[#f0a709] opacity-0 group-hover:opacity-100 transition-opacity" />
                     About Us
                   </Link>
                 </li>
                 <li>
                   <Link
                     href="/consulting-services"
-                    className="text-white/50 hover:text-[#4370F3] text-sm transition-colors flex items-center group"
+                    className="text-white/50 hover:text-[#f0a709] text-sm transition-colors flex items-center group"
                   >
-                    <FiArrowRight className="mr-2 text-[#27A1F6] opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <FiArrowRight className="mr-2 text-[#f0a709] opacity-0 group-hover:opacity-100 transition-opacity" />
                     Consulting Services
                   </Link>
                 </li>
                 <li>
                   <Link
                     href="/success"
-                    className="text-white/50 hover:text-[#4370F3] text-sm transition-colors flex items-center group"
+                    className="text-white/50 hover:text-[#f0a709] text-sm transition-colors flex items-center group"
                   >
-                    <FiArrowRight className="mr-2 text-[#27A1F6] opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <FiArrowRight className="mr-2 text-[#f0a709] opacity-0 group-hover:opacity-100 transition-opacity" />
                     Success Stories
                   </Link>
                 </li>
                 <li>
                   <Link
                     href="/contact-us"
-                    className="text-white/50 hover:text-[#4370F3] text-sm transition-colors flex items-center group"
+                    className="text-white/50 hover:text-[#f0a709] text-sm transition-colors flex items-center group"
                   >
-                    <FiArrowRight className="mr-2 text-[#27A1F6] opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <FiArrowRight className="mr-2 text-[#f0a709] opacity-0 group-hover:opacity-100 transition-opacity" />
                     Contact Us
                   </Link>
                 </li>
@@ -272,12 +272,12 @@ function Footer() {
                 <input
                   type="email"
                   placeholder="Your email"
-                  className="px-4 py-2 text-sm text-white w-full border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-[#27A1F6] focus:border-transparent"
+                  className="px-4 py-2 text-sm text-white w-full border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-[#f0a709] focus:border-transparent"
                   required
                 />
                 <button
                   type="submit"
-                  className="bg-[#27A1F6] hover:bg-[#4370F3] text-white px-4 py-2 text-sm font-medium rounded-r-md transition-colors"
+                  className="bg-[#f0a709] hover:bg-[#f0a709] text-white px-4 py-2 text-sm font-medium rounded-r-md transition-colors"
                 >
                   Subscribe
                 </button>
@@ -285,25 +285,25 @@ function Footer() {
               <div className="flex items-center gap-4 mt-4">
                 <Link
                   href="https://facebook.com"
-                  className="text-gray-500 hover:text-[#4370F3] p-2 rounded-full hover:bg-gray-100 transition-colors"
+                  className="text-[#f0a709] hover:text-[#fff] p-2 rounded-full hover:bg-[#f0a709] transition-colors"
                 >
                   <FiFacebook />
                 </Link>
                 <Link
                   href="https://twitter.com"
-                  className="text-gray-500 hover:text-[#4370F3] p-2 rounded-full hover:bg-gray-100 transition-colors"
+                  className="text-[#f0a709] hover:text-[#fff] p-2 rounded-full hover:bg-[#f0a709] transition-colors"
                 >
                   <FiTwitter />
                 </Link>
                 <Link
                   href="https://linkedin.com"
-                  className="text-gray-500 hover:text-[#4370F3] p-2 rounded-full hover:bg-gray-100 transition-colors"
+                  className="text-[#f0a709] hover:text-[#fff] p-2 rounded-full hover:bg-[#f0a709] transition-colors"
                 >
                   <FiLinkedin />
                 </Link>
                 <Link
                   href="https://instagram.com"
-                  className="text-gray-500 hover:text-[#4370F3] p-2 rounded-full hover:bg-gray-100 transition-colors"
+                  className="text-[#f0a709] hover:text-[#fff] p-2 rounded-full hover:bg-[#f0a709] transition-colors"
                 >
                   <FiInstagram />
                 </Link>
@@ -316,8 +316,8 @@ function Footer() {
 
               <div className="flex flex-row flex-wrap gap-6">
                 <div className="flex flex-col items-center group">
-                  <div className="p-3 rounded-lg group-hover:bg-gray-700 transition-all duration-300">
-                    <FaCcVisa className="text-4xl text-[#1A1F71] group-hover:text-[#5A8CFF]" />
+                  <div className="p-3 rounded-lg group-hover:bg-black transition-all duration-300 cursor-pointer">
+                    <FaCcVisa className="text-4xl text-[#1A1F71] group-hover:text-[#f0a709]" />
                   </div>
                   <span className="mt-2 text-xs text-gray-400 group-hover:text-white transition-colors">
                     Visa
@@ -325,8 +325,8 @@ function Footer() {
                 </div>
 
                 <div className="flex flex-col items-center group">
-                  <div className="p-3 rounded-lg group-hover:bg-gray-700 transition-all duration-300">
-                    <FaCcMastercard className="text-4xl text-[#EB001B] group-hover:text-[#FF6B6B]" />
+                  <div className="p-3 rounded-lg group-hover:bg-black transition-all duration-300 cursor-pointer">
+                    <FaCcMastercard className="text-4xl text-[#EB001B] group-hover:text-[#f0a709] cursor-pointer" />
                   </div>
                   <span className="mt-2 text-xs text-gray-400 group-hover:text-white transition-colors">
                     Mastercard
@@ -334,45 +334,17 @@ function Footer() {
                 </div>
 
                 <div className="flex flex-col items-center group">
-                  <div className="p-3 rounded-lg group-hover:bg-gray-700 transition-all duration-300">
-                    <FaCcDiscover className="text-4xl text-[#FF6000] group-hover:text-[#FFA364]" />
-                  </div>
-                  <span className="mt-2 text-xs text-gray-400 group-hover:text-white transition-colors">
-                    Discover
-                  </span>
-                </div>
-
-                <div className="flex flex-col items-center group">
-                  <div className="p-3 rounded-lg group-hover:bg-gray-700 transition-all duration-300">
-                    <FaCcAmex className="text-4xl text-[#2E77BB] group-hover:text-[#6BB5FF]" />
+                  <div className="p-3 rounded-lg group-hover:bg-black transition-all duration-300 cursor-pointer">
+                    <FaCcAmex className="text-4xl text-[#2E77BB] group-hover:text-[#f0a709]" />
                   </div>
                   <span className="mt-2 text-xs text-gray-400 group-hover:text-white transition-colors">
                     Amex
                   </span>
                 </div>
 
-                {/* Digital Payments Row */}
                 <div className="flex flex-col items-center group">
-                  <div className="p-3 rounded-lg group-hover:bg-gray-700 transition-all duration-300">
-                    <FaApplePay className="text-4xl text-white group-hover:text-gray-300" />
-                  </div>
-                  <span className="mt-2 text-xs text-gray-400 group-hover:text-white transition-colors">
-                    Apple Pay
-                  </span>
-                </div>
-
-                <div className="flex flex-col items-center group">
-                  <div className="p-3 rounded-lg group-hover:bg-gray-700 transition-all duration-300">
-                    <SiGooglepay className="text-4xl text-[#4285F4] group-hover:text-[#8AB4F8]" />
-                  </div>
-                  <span className="mt-2 text-xs text-gray-400 group-hover:text-white transition-colors">
-                    Google Pay
-                  </span>
-                </div>
-
-                <div className="flex flex-col items-center group">
-                  <div className="p-3 rounded-lg group-hover:bg-gray-700 transition-all duration-300">
-                    <FaPaypal className="text-4xl text-[#003087] group-hover:text-[#009CDE]" />
+                  <div className="p-3 rounded-lg group-hover:bg-black transition-all duration-300 cursor-pointer">
+                    <FaPaypal className="text-4xl text-[#003087] group-hover:text-[#f0a709]" />
                   </div>
                   <span className="mt-2 text-xs text-gray-400 group-hover:text-white transition-colors">
                     PayPal
@@ -380,8 +352,8 @@ function Footer() {
                 </div>
 
                 <div className="flex flex-col items-center group">
-                  <div className="p-3 rounded-lg group-hover:bg-gray-700 transition-all duration-300">
-                    <SiStripe className="text-4xl text-[#635BFF] group-hover:text-[#A39CFF]" />
+                  <div className="p-3 rounded-lg group-hover:bg-black transition-all duration-300 cursor-pointer">
+                    <SiStripe className="text-4xl text-[#635BFF] group-hover:text-[#f0a709]" />
                   </div>
                   <span className="mt-2 text-xs text-gray-400 group-hover:text-white transition-colors">
                     Stripe
@@ -401,19 +373,19 @@ function Footer() {
               <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
                 <Link
                   href="/"
-                  className="text-white/50 hover:text-[#4370F3] text-sm transition-colors"
+                  className="text-white/50 hover:text-[#f0a709] text-sm transition-colors"
                 >
                   Privacy Policy
                 </Link>
                 <Link
                   href="/"
-                  className="text-white/50 hover:text-[#4370F3] text-sm transition-colors"
+                  className="text-white/50 hover:text-[#f0a709] text-sm transition-colors"
                 >
                   Terms of Service
                 </Link>
                 <Link
                   href="/"
-                  className="text-white/50 hover:text-[#4370F3] text-sm transition-colors"
+                  className="text-white/50 hover:text-[#f0a709] text-sm transition-colors"
                 >
                   Cookie Policy
                 </Link>

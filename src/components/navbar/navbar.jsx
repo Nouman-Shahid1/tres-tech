@@ -41,43 +41,41 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-[#365479] shadow-md py-2" : "bg-transparent py-4"
+        scrolled ? "bg-[#171717] shadow-md py-2" : "bg-transparent py-4"
       } ${openSans.className}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <div className="flex-shrink-0">
-            <Image
+            {/* <Image
               src={logo}
               alt="Logo"
               width={scrolled ? 100 : 140}
               height={scrolled ? 30 : 40}
               className="transition-all duration-300 object-contain"
-            />
+            /> */}
           </div>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
                 className={`${
-                  scrolled ? "text-white" : "text-white"
-                } font-semibold hover:text-[#4370F3] transition-colors duration-200 relative group`}
+                  scrolled ? "text-[#f0a709]" : "text-[#f0a709]"
+                } font-semibold hover:text-[#fff] transition-colors duration-200 relative group`}
               >
                 {link.name}
-                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#27A1F6] transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[#fff] transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
             <button
               onClick={openCalendly}
               className={`ml-6 px-6 py-3 rounded-full font-bold text-sm transition-all duration-300 ${
                 scrolled
-                  ? "bg-[#27A1F6] text-white hover:bg-[#4370F3]"
-                  : "bg-white text-[#27A1F6] hover:bg-gray-100"
-              } shadow-lg hover:shadow-xl hover:translate-y-[-2px] flex items-center`}
+                  ? "bg-white text-[#f0a709] hover:bg-[#f0a709] hover:text-black"
+                  : "bg-white text-[#f0a709] hover:bg-[#f0a709] hover:text-black "
+              } shadow-lg hover:shadow-xl hover:translate-y-[-2px] flex items-center cursor-pointer`}
             >
               FREE CONSULTATION
               <FiArrowRight className="ml-2" />

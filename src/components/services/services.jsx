@@ -25,55 +25,55 @@ const openSans = Open_Sans({
 
 const services = [
   {
-    title: "Business Strategy",
+    title: "Custom Software Development",
     description:
       "Develop winning strategies to outperform competitors and achieve sustainable growth in your market.",
-    icon: <FiTrendingUp className="w-8 h-8 text-[#27A1F6]" />,
+    icon: <FiTrendingUp className="w-8 h-8 text-[#f0a709]" />,
   },
   {
-    title: "Financial Advisory",
+    title: "IT & Tech Support Services",
     description:
       "Expert guidance to optimize your financial operations, reduce costs, and maximize profitability.",
-    icon: <FiDollarSign className="w-8 h-8 text-[#27A1F6]" />,
+    icon: <FiDollarSign className="w-8 h-8 text-[#f0a709]" />,
   },
   {
-    title: "Market Expansion",
+    title: "Call Center Solutions",
     description:
       "Data-driven approaches to enter new markets and increase your customer base effectively.",
-    icon: <FiBarChart2 className="w-8 h-8 text-[#27A1F6]" />,
+    icon: <FiBarChart2 className="w-8 h-8 text-[#f0a709]" />,
   },
   {
-    title: "Operational Excellence",
+    title: "Customized Dashboards & API Integrations",
     description:
       "Streamline processes and boost productivity with our operational optimization frameworks.",
-    icon: <FiTarget className="w-8 h-8 text-[#27A1F6]" />,
+    icon: <FiTarget className="w-8 h-8 text-[#f0a709]" />,
   },
   {
-    title: "Digital Transformation",
+    title: "Digital & Social Media Marketing",
     description:
       "Modernize your business with cutting-edge technology solutions tailored to your needs.",
-    icon: <FiCpu className="w-8 h-8 text-[#27A1F6]" />,
+    icon: <FiCpu className="w-8 h-8 text-[#f0a709]" />,
   },
   {
-    title: "Talent Optimization",
+    title: "AI-Based Development",
     description:
       "Build high-performing teams with our HR strategies and organizational development expertise.",
-    icon: <FiTeam className="w-8 h-8 text-[#27A1F6]" />,
+    icon: <FiTeam className="w-8 h-8 text-[#f0a709]" />,
   },
 ];
 
 const ConsultingServices = () => {
   return (
-    <section className="py-20 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 bg-gray-50">
+    <section className="py-20 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 bg-black">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <span className="inline-block bg-blue-100 text-[#27A1F6] px-4 py-2 rounded-full text-sm font-medium mb-4">
+          {/* <span className="inline-block bg-blue-100 text-[#f0a709]px-4 py-2 rounded-full text-sm font-medium mb-4">
             OUR EXPERTISE
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Comprehensive Consulting Services
+          </span> */}
+          <h2 className="text-3xl md:text-4xl font-bold text-[#f0a709] mb-4">
+            Our Products & Services
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-[#dda224]  max-w-3xl mx-auto">
             We deliver measurable results through tailored solutions designed
             for your unique business challenges.
           </p>
@@ -83,16 +83,18 @@ const ConsultingServices = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 hover:border-blue-100"
+              className="group bg-[#83682f] p-8 rounded-xl shadow-md hover:shadow-xl hover:bg-[#f0a709] transition-all duration-300 hover:-translate-y-2 border border-[#997e43] hover:border-[#f0a709]"
             >
-              <div className="mb-6 flex items-center justify-center w-16 h-16 bg-blue-50 rounded-full group-hover:bg-blue-100 transition-colors">
+              <div className="mb-6 flex items-center justify-center w-16 h-16 bg-[#645024] rounded-full group-hover:bg-[#b87f04] transition-colors">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-[#27A1F6] transition-colors">
+              <h3 className="text-xl font-bold mb-3 text-white group-hover:text-[#000] transition-colors">
                 {service.title}
               </h3>
-              <p className="text-gray-600 mb-6">{service.description}</p>
-              <div className="flex items-center text-[#27A1F6] font-medium group-hover:text-[#4370F3] transition-colors">
+              <p className="text-white mb-6 group-hover:text-[#000]">
+                {service.description}
+              </p>
+              <div className="flex items-center text-[#f8ac06] font-medium group-hover:text-[#000] transition-colors">
                 <span>Discover how</span>
                 <svg
                   className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
@@ -113,7 +115,7 @@ const ConsultingServices = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <button className="bg-[#27A1F6] hover:bg-[#4370F3] text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl inline-flex items-center">
+          <button className="bg-white text-[#f0a709] hover:bg-[#f0a709] hover:text-black font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl inline-flex items-center">
             <span>Explore All Services</span>
             <svg
               className="w-4 h-4 ml-2"

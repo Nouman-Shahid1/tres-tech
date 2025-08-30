@@ -49,28 +49,73 @@ export default function Home() {
     <div className={`${poppins.variable} ${openSans.variable} font-sans`}>
       {/* Hero Section */}
       <section
-        className="relative w-full h-[130vh] bg-cover bg-center bg-fixed"
+        className="relative w-full h-[140vh] bg-cover bg-center"
         style={{
           backgroundImage:
-            "url('https://websitedemos.net/business-consultancy-firm-04/wp-content/uploads/sites/882/2021/06/hero-free-img.jpg')",
+            "url('https://thewebcraftsolutions.com/wp-content/uploads/2023/10/h10-bg-3.jpg')",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-gray-600/80"></div>
-        <div className="relative z-10 text-white flex flex-col justify-center h-full px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32">
-          <div className="max-w-2xl my-36">
+        <div className="relative z-10 pt-3 text-white flex flex-row justify-between items-center h-full px-4 sm:px-8">
+          <img
+            loading="lazy"
+            decoding="async"
+            width="552"
+            height="640"
+            src="https://thewebcraftsolutions.com/wp-content/uploads/2023/10/h10-banner-1.png"
+            className="attachment-full"
+            alt=""
+            srcset="https://thewebcraftsolutions.com/wp-content/uploads/2023/10/h10-banner-1.png 552w, https://thewebcraftsolutions.com/wp-content/uploads/2023/10/h10-banner-1-260x300.png 260w"
+            sizes="(max-width: 452px) 100vw, 452px"
+          ></img>
+          <div className="absolute bottom-[11%] left-[12%] transform mb-6 p-4 bg-white rounded-[50px] gap-8 px-8 shadow-md flex items-center justify-between">
+            <div className="flex space-x-2">
+              <img
+                src="https://thewebcraftsolutions.com/wp-content/uploads/2023/07/team-02-55x55.jpg"
+                alt="Client 1"
+                className="w-10 h-10 rounded-full object-cover"
+              />
+              <img
+                src="https://thewebcraftsolutions.com/wp-content/uploads/2023/07/team-04-55x55.jpg"
+                alt="Client 2"
+                className="w-10 h-10 rounded-full object-cover"
+              />
+            </div>
+            <div className="ml-4 flex-1">
+              <p className="font-semibold text-gray-700">
+                Happy Clients & Rating
+              </p>
+              <div className="flex items-center space-x-2 text-yellow-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-5 h-5"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path d="M10 15.27l4.14 2.22-1.15-4.95 3.81-3.3-5.04-.43L10 2.47 7.24 9.81 2.2 10.24l3.81 3.3-1.15 4.95L10 15.27z" />
+                </svg>
+                <span className="text-lg font-bold">4.8</span>
+                <span className="text-sm text-gray-500">(8,090)</span>
+              </div>
+            </div>
+          </div>
+          {/* The rest of the content */}
+          <div className="max-w-2xl">
             <div className="inline-flex items-center bg-blue-500/20 px-4 py-2 rounded-full mb-6">
               <FiUsers className="mr-2" />
               <span className="text-sm font-medium tracking-wider">
                 BUSINESS CONSULTING
               </span>
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-              Strong business <span className="text-blue-300">strategy</span> to
-              grow
+            <h1 className="text-5xl md:text-6xl lg:text-[60px] font-bold leading-tight mb-6">
+              Grow your <span className="text-blue-300">business</span> business
+              with our new bold agency
             </h1>
-            <p className="text-lg md:text-xl mb-8 opacity-90 max-w-lg">
-              We help small business owners and professionals to get things done
-              right. Tempor incididunt ut labore et dolore magna aliqua.
+            <p className="text-lg md:text-[22px] mb-8 opacity-90 max-w-2xl">
+              We understand the effect a great brand story can have with its
+              audience, but we also understand the trust and affinity that can
+              only come with great design. We never underestimate any parts of
+              each project.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button

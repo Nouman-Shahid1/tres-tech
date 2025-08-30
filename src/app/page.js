@@ -169,7 +169,7 @@ export default function Home() {
                 technology with strategic expertise to help businesses reach
                 their highest potential. Our tailored solutions are designed to
                 tackle both short-term challenges and fuel sustainable growth.
-                Whether it's custom software development or AI-driven
+                Whether it&apos;s custom software development or AI-driven
                 strategies, we equip your business to thrive in an ever-evolving
                 digital world. Collaborate with us to achieve operational
                 excellence, optimize performance, and drive long-term success.

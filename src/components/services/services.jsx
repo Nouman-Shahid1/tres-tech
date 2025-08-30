@@ -1,10 +1,15 @@
 import { Poppins, Open_Sans } from "next/font/google";
 import {
+  FiCode,
+  FiHeadphones,
+  FiPhone,
+  FiPieChart,
+  FiShare2,
+  FiCpu,
   FiTrendingUp,
   FiDollarSign,
   FiBarChart2,
   FiTarget,
-  FiCpu,
   FiUsers as FiTeam,
 } from "react-icons/fi";
 import { FaLinkedinIn, FaTwitter, FaGithub } from "react-icons/fa";
@@ -27,38 +32,37 @@ const services = [
   {
     title: "Custom Software Development",
     description:
-      "Develop winning strategies to outperform competitors and achieve sustainable growth in your market.",
-    icon: <FiTrendingUp className="w-8 h-8 text-[#f0a709]" />,
+      "Tailored applications built to solve your specific business challenges efficiently.",
+    icon: <FiCode className="w-8 h-8 text-[#f0a709]" />,
   },
   {
     title: "IT & Tech Support Services",
     description:
-      "Expert guidance to optimize your financial operations, reduce costs, and maximize profitability.",
-    icon: <FiDollarSign className="w-8 h-8 text-[#f0a709]" />,
+      "Round-the-clock technical assistance to keep your systems running smoothly.",
+    icon: <FiHeadphones className="w-8 h-8 text-[#f0a709]" />,
   },
   {
     title: "Call Center Solutions",
     description:
-      "Data-driven approaches to enter new markets and increase your customer base effectively.",
-    icon: <FiBarChart2 className="w-8 h-8 text-[#f0a709]" />,
+      "Customer service solutions that enhance engagement and satisfaction.",
+    icon: <FiPhone className="w-8 h-8 text-[#f0a709]" />,
   },
   {
     title: "Customized Dashboards & API Integrations",
-    description:
-      "Streamline processes and boost productivity with our operational optimization frameworks.",
-    icon: <FiTarget className="w-8 h-8 text-[#f0a709]" />,
+    description: "Unified data visualization and seamless system connectivity.",
+    icon: <FiPieChart className="w-8 h-8 text-[#f0a709]" />,
   },
   {
     title: "Digital & Social Media Marketing",
     description:
-      "Modernize your business with cutting-edge technology solutions tailored to your needs.",
-    icon: <FiCpu className="w-8 h-8 text-[#f0a709]" />,
+      "Strategic online campaigns to boost your brand's visibility and engagement.",
+    icon: <FiShare2 className="w-8 h-8 text-[#f0a709]" />,
   },
   {
     title: "AI-Based Development",
     description:
-      "Build high-performing teams with our HR strategies and organizational development expertise.",
-    icon: <FiTeam className="w-8 h-8 text-[#f0a709]" />,
+      "Intelligent solutions leveraging artificial intelligence for automation and insights.",
+    icon: <FiCpu className="w-8 h-8 text-[#f0a709]" />,
   },
 ];
 

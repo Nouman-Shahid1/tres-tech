@@ -47,13 +47,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            {/* <Image
+            <Image
               src={logo}
               alt="Logo"
-              width={scrolled ? 100 : 140}
-              height={scrolled ? 30 : 40}
+              width={scrolled ? 200 : 240}
+              height={scrolled ? 30 : 50}
               className="transition-all duration-300 object-contain"
-            /> */}
+            />
           </div>
 
           <div className="hidden md:flex items-center space-x-8">

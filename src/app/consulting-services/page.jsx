@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Poppins, Open_Sans } from "next/font/google";
 import Image from "next/image";
 import {
@@ -126,7 +126,59 @@ const consultingServices = [
       "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80",
   },
 ];
+const Counter = ({ end, duration = 2000 }) => {
+  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const hasCounted = useRef(false);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasCounted.current) {
+          hasCounted.current = true;
+
+          let startTime = null;
+          const startValue = 0;
+          const endValue = end;
+
+          const animate = (currentTime) => {
+            if (!startTime) startTime = currentTime;
+            const progress = Math.min((currentTime - startTime) / duration, 1);
+
+            // Easing function for smooth animation
+            const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+            const currentCount = Math.floor(
+              easeOutQuart * (endValue - startValue) + startValue
+            );
+
+            setCount(currentCount);
+
+            if (progress < 1) {
+              requestAnimationFrame(animate);
+            } else {
+              setCount(endValue);
+            }
+          };
+
+          requestAnimationFrame(animate);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [end, duration]);
+
+  return <span ref={ref}>{count}</span>;
+};
 const ConsultingServices = () => {
   return (
     <div className={`${poppins.variable} ${openSans.variable} font-sans`}>
@@ -212,85 +264,90 @@ const ConsultingServices = () => {
       </section>
 
       {/* Approach Section */}
-      <section className="py-20 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 bg-gray-50">
+      <section className="py-20 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 bg-black">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative h-full min-h-[500px] rounded-2xl overflow-hidden shadow-xl">
-              <Image
+            <div className="relative h-full min-h-[500px] rounded-2xl overflow-hidden shadow-2xl border-2 border-[#f0a709]/30">
+              <img
                 src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
                 alt="Consulting approach"
-                fill
-                className="object-cover"
-                priority
+                className="object-cover w-full h-full"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-800/80 to-gray-600/60 flex items-end p-8">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#100A1D] to-transparent flex items-end p-8">
                 <div className="text-white">
                   <h3 className="text-3xl font-bold mb-4">
-                    Our Proven Methodology
+                    Our Proven{" "}
+                    <span className="text-[#f0a709]">Methodology</span>
                   </h3>
-                  <p className="text-lg">
+                  <p className="text-lg text-gray-300">
                     Data-driven insights combined with industry expertise.
                   </p>
                 </div>
               </div>
             </div>
             <div>
-              <span className="inline-block bg-blue-100 text-[#27A1F6] px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <span className="inline-block bg-[#1A1335] text-[#f0a709] px-6 py-3 rounded-full text-sm font-medium mb-4 tracking-wide uppercase">
                 OUR APPROACH
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#4370F3] mb-6">
-                Strategic <span className="text-blue-500">Consulting</span>{" "}
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Strategic <span className="text-[#f0a709]">Consulting</span>{" "}
                 Process
               </h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-xl text-gray-300 mb-8">
                 Our structured approach ensures we deliver measurable results
                 for every client engagement.
               </p>
               <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="bg-blue-100 p-3 rounded-full flex-shrink-0">
-                    <span className="text-[#27A1F6] text-xl font-bold">1</span>
+                <div className="flex items-start gap-4 p-4 bg-[#1A1335] rounded-xl hover:bg-[#1A1335]/80 transition-colors duration-300">
+                  <div className="bg-[#f0a709] p-3 rounded-full flex-shrink-0">
+                    <span className="text-[#100A1D] text-xl font-bold">1</span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">Discovery</h3>
-                    <p className="text-gray-600">
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      Discovery
+                    </h3>
+                    <p className="text-gray-300">
                       Deep dive into your business challenges, goals, and market
                       position.
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="bg-blue-100 p-3 rounded-full flex-shrink-0">
-                    <span className="text-[#27A1F6] text-xl font-bold">2</span>
+                <div className="flex items-start gap-4 p-4 bg-[#1A1335] rounded-xl hover:bg-[#1A1335]/80 transition-colors duration-300">
+                  <div className="bg-[#f0a709] p-3 rounded-full flex-shrink-0">
+                    <span className="text-[#100A1D] text-xl font-bold">2</span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">Analysis</h3>
-                    <p className="text-gray-600">
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      Analysis
+                    </h3>
+                    <p className="text-gray-300">
                       Comprehensive data collection and strategic assessment.
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="bg-blue-100 p-3 rounded-full flex-shrink-0">
-                    <span className="text-[#27A1F6] text-xl font-bold">3</span>
+                <div className="flex items-start gap-4 p-4 bg-[#1A1335] rounded-xl hover:bg-[#1A1335]/80 transition-colors duration-300">
+                  <div className="bg-[#f0a709] p-3 rounded-full flex-shrink-0">
+                    <span className="text-[#100A1D] text-xl font-bold">3</span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">Solution Design</h3>
-                    <p className="text-gray-600">
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      Solution Design
+                    </h3>
+                    <p className="text-gray-300">
                       Customized recommendations tailored to your specific
                       needs.
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="bg-blue-100 p-3 rounded-full flex-shrink-0">
-                    <span className="text-[#27A1F6] text-xl font-bold">4</span>
+                <div className="flex items-start gap-4 p-4 bg-[#1A1335] rounded-xl hover:bg-[#1A1335]/80 transition-colors duration-300">
+                  <div className="bg-[#f0a709] p-3 rounded-full flex-shrink-0">
+                    <span className="text-[#100A1D] text-xl font-bold">4</span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">
+                    <h3 className="text-xl font-bold text-white mb-2">
                       Implementation Support
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-300">
                       Hands-on assistance to ensure successful execution.
                     </p>
                   </div>
@@ -302,65 +359,127 @@ const ConsultingServices = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 bg-white">
+      <section className="py-20 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 bg-gradient-to-b from-[#0F0828] to-[#100A1D]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <span className="inline-block bg-blue-100 text-[#27A1F6] px-4 py-2 rounded-full text-sm font-medium mb-4">
+            <span className="inline-block bg-[#1A1335] text-[#f0a709] px-6 py-3 rounded-full text-sm font-medium mb-4 tracking-wide uppercase">
               WHY CHOOSE US
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#4370F3] mb-4">
-              Benefits of Our Consulting Services
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Benefits of Our{" "}
+              <span className="text-[#f0a709]">Consulting Services</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Partner with us to unlock your business&apos;s full potential.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Partner with us to unlock your business's full potential with
+              innovative solutions.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-blue-500">
-              <h3 className="text-xl font-bold mb-3">Industry Expertise</h3>
-              <p className="text-gray-600">
+            <div className="bg-gradient-to-b from-[#1A1335] to-[#100A1D] p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-[#f0a709]/20 relative overflow-hidden group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#f0a709] to-transparent opacity-20 group-hover:opacity-30 transition-opacity rounded-xl"></div>
+              <div className="bg-[#f0a709] w-14 h-14 rounded-full flex items-center justify-center mb-6 relative z-10">
+                <svg
+                  className="w-6 h-6 text-[#100A1D]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                  ></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3 relative z-10">
+                Industry Expertise
+              </h3>
+              <p className="text-gray-300 relative z-10">
                 Our consultants bring deep industry knowledge and best practices
                 from working with hundreds of clients across diverse sectors.
               </p>
             </div>
-            <div className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-blue-500">
-              <h3 className="text-xl font-bold mb-3">Customized Solutions</h3>
-              <p className="text-gray-600">
+
+            <div className="bg-gradient-to-b from-[#1A1335] to-[#100A1D] p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-[#f0a709]/20 relative overflow-hidden group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#f0a709] to-transparent opacity-20 group-hover:opacity-30 transition-opacity rounded-xl"></div>
+              <div className="bg-[#f0a709] w-14 h-14 rounded-full flex items-center justify-center mb-6 relative z-10">
+                <svg
+                  className="w-6 h-6 text-[#100A1D]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3 relative z-10">
+                Customized Solutions
+              </h3>
+              <p className="text-gray-300 relative z-10">
                 We don't believe in one-size-fits-all approaches. Every solution
                 is tailored to your specific business context and objectives.
               </p>
             </div>
-            <div className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-blue-500">
-              <h3 className="text-xl font-bold mb-3">Measurable Results</h3>
-              <p className="text-gray-600">
+
+            <div className="bg-gradient-to-b from-[#1A1335] to-[#100A1D] p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-[#f0a709]/20 relative overflow-hidden group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#f0a709] to-transparent opacity-20 group-hover:opacity-30 transition-opacity rounded-xl"></div>
+              <div className="bg-[#f0a709] w-14 h-14 rounded-full flex items-center justify-center mb-6 relative z-10">
+                <svg
+                  className="w-6 h-6 text-[#100A1D]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3 relative z-10">
+                Measurable Results
+              </h3>
+              <p className="text-gray-300 relative z-10">
                 We focus on delivering tangible outcomes with clear KPIs and
                 metrics to track progress and ROI.
               </p>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 bg-[#f0a709]">
-        <div className="max-w-4xl mx-auto text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl mb-8">
-            Schedule a free consultation with our experts to discuss your
-            challenges and how we can help.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact-us">
-              <button className="bg-transparent border-2 border-white hover:bg-white/10 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
-                <span>Contact Us</span>
-              </button>
-            </Link>
+          {/* Additional Stats Section */}
+          <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+              { number: 200, label: "Projects Completed", suffix: "+" },
+              { number: 98, label: "Client Satisfaction", suffix: "%" },
+              { number: 15, label: "Years Experience", suffix: "+" },
+              { number: 50, label: "Industry Experts", suffix: "+" },
+            ].map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-4xl md:text-5xl font-bold text-[#f0a709] mb-2">
+                  <Counter end={stat.number} duration={2000} />
+                  {stat.suffix}
+                </div>
+                <div className="text-gray-300 text-sm uppercase tracking-wide">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
+
       <section className="relative py-20 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">

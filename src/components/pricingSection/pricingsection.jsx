@@ -73,30 +73,6 @@ const PricingSection = () => {
             Find the best possible plan according to your needs and scale your
             business efficiently.
           </p>
-
-          {/* Billing Toggle */}
-          <div className="inline-flex items-center bg-[#1A1335] rounded-full p-1 mt-8">
-            <button
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${
-                billingCycle === "monthly"
-                  ? "bg-[#f0a709] text-[#100A1D]"
-                  : "text-gray-300"
-              }`}
-              onClick={() => setBillingCycle("monthly")}
-            >
-              Monthly
-            </button>
-            <button
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${
-                billingCycle === "yearly"
-                  ? "bg-[#f0a709] text-[#100A1D]"
-                  : "text-gray-300"
-              }`}
-              onClick={() => setBillingCycle("yearly")}
-            >
-              Yearly (Save 10%)
-            </button>
-          </div>
         </div>
 
         {/* Pricing Cards */}
@@ -137,16 +113,12 @@ const PricingSection = () => {
                     <span className="text-5xl font-bold text-[#f0a709]">
                       {plan.price}
                     </span>
-                    <span className="text-gray-400 ml-2">FROM</span>
                   </div>
-                  <p className="text-gray-400 text-sm mt-2">
-                    per {billingCycle === "monthly" ? "month" : "year"}
-                  </p>
-                  {billingCycle === "yearly" && (
+                  {/* {billingCycle === "yearly" && (
                     <p className="text-[#f0a709] text-sm mt-1">
                       Save 10% with yearly billing
                     </p>
-                  )}
+                  )} */}
                 </div>
 
                 {/* Features List */}

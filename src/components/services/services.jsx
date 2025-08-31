@@ -112,7 +112,7 @@ const ConsultingServices = () => {
                 {service.description}
               </p>
               <div className="flex items-center text-[#f8ac06] font-medium group-hover:text-[#fff] transition-colors">
-                <span>Discover how</span>
+                <span>Discover now</span>
                 <svg
                   className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
                   fill="none"

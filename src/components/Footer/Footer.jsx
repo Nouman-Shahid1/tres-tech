@@ -32,7 +32,10 @@ function Footer() {
 
   return (
     <>
-      <section className="flex flex-col lg:flex-row items-center bg-[#000] min-h-[100vh] gap-6">
+      <section
+        id="contact-footer"
+        className="flex flex-col lg:flex-row items-center bg-[#000] min-h-[100vh] gap-6"
+      >
         {/* Left side - Image */}
         <div
           className="w-full lg:w-1/2 min-h-[100vh] bg-cover bg-center bg-no-repeat"
@@ -217,16 +220,7 @@ function Footer() {
                     className="text-white/50 hover:text-[#f0a709] text-sm transition-colors flex items-center group"
                   >
                     <FiArrowRight className="mr-2 text-[#f0a709] opacity-0 group-hover:opacity-100 transition-opacity" />
-                    Consulting Services
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/success"
-                    className="text-white/50 hover:text-[#f0a709] text-sm transition-colors flex items-center group"
-                  >
-                    <FiArrowRight className="mr-2 text-[#f0a709] opacity-0 group-hover:opacity-100 transition-opacity" />
-                    Success Stories
+                    Product & Services
                   </Link>
                 </li>
                 <li>
@@ -244,18 +238,35 @@ function Footer() {
             {/* Service Areas */}
             <div className="space-y-4">
               <h4 className="text-lg font-semibold text-white">
-                Service Areas
+                Our Key Services Include:
               </h4>
               <ul className="space-y-3">
-                <li className="text-white/50 text-sm">Business Strategy</li>
-                <li className="text-white/50 text-sm">Process Optimization</li>
-                <li className="text-white/50 text-sm">Technology Consulting</li>
-                <li className="text-white/50 text-sm">
-                  Digital Transformation
+                <li className="text-white/50 text-sm hover:text-[#f0a709]">
+                  Custom Software Development
                 </li>
-                <li className="text-white/50 text-sm">Market Expansion</li>
-                <li className="text-white/50 text-sm">
-                  Operational Excellence
+                <li className="text-white/50 text-sm hover:text-[#f0a709]">
+                  IT & Tech Support
+                </li>
+                <li className="text-white/50 text-sm hover:text-[#f0a709]">
+                  Call Center Solutions
+                </li>
+                <li className="text-white/50 text-sm hover:text-[#f0a709]">
+                  Digital & Social Media Marketing
+                </li>
+                <li className="text-white/50 text-sm hover:text-[#f0a709]">
+                  Customized Dashboards & API Integrations
+                </li>
+                <li className="text-white/50 text-sm hover:text-[#f0a709]">
+                  AI-Based Development
+                </li>
+                <li className="text-white/50 text-sm hover:text-[#f0a709]">
+                  Project Management Services
+                </li>
+                <li className="text-white/50 text-sm hover:text-[#f0a709]">
+                  Tech & Non-Tech Bench Sales Recruitment
+                </li>
+                <li className="text-white/50 text-sm hover:text-[#f0a709]">
+                  Placement Consultancy & Staff Augmentation
                 </li>
               </ul>
             </div>
@@ -368,26 +379,26 @@ function Footer() {
           <div className="border-t border-gray-200 py-6">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-gray-500 text-sm">
-                © {new Date().getFullYear()} Techneon. All rights reserved.
+                © 2020 Trace Tech Global. All rights reserved.
               </p>
               <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
                 <Link
-                  href="/"
+                  href="/privacy-policy"
                   className="text-white/50 hover:text-[#f0a709] text-sm transition-colors"
                 >
                   Privacy Policy
                 </Link>
                 <Link
-                  href="/"
+                  href="/terms-and-conditions"
                   className="text-white/50 hover:text-[#f0a709] text-sm transition-colors"
                 >
-                  Terms of Service
+                  Terms And Conditions
                 </Link>
                 <Link
-                  href="/"
+                  href="/return-policy"
                   className="text-white/50 hover:text-[#f0a709] text-sm transition-colors"
                 >
-                  Cookie Policy
+                  Return Policy
                 </Link>
               </div>
             </div>

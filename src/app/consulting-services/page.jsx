@@ -18,6 +18,7 @@ import {
   FiUserPlus,
   FiUsers,
   FiClipboard,
+  FiShoppingCart,
 } from "react-icons/fi";
 import Footer from "@/components/Footer/Footer";
 import Link from "next/link";
@@ -93,7 +94,7 @@ const consultingServices = [
       "Leverage the power of AI to automate processes, improve efficiency, and unlock data-driven insights that propel your business forward.",
     icon: <FiCpu className="w-8 h-8 text-[#f0a709] group-hover:text-[#fff]" />,
     image:
-      "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80",
+      "https://plus.unsplash.com/premium_photo-1680608979589-e9349ed066d5?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Project Management Services",
@@ -103,7 +104,7 @@ const consultingServices = [
       <FiClipboard className="w-8 h-8 text-[#f0a709] group-hover:text-[#fff]" />
     ),
     image:
-      "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80",
+      "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Tech & Non-Tech Bench Sales Recruitment",
@@ -113,7 +114,7 @@ const consultingServices = [
       <FiUsers className="w-8 h-8 text-[#f0a709] group-hover:text-[#fff]" />
     ),
     image:
-      "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80",
+      "https://images.unsplash.com/photo-1698047681452-08eba22d0c64?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     title: "Placement Consultancy & Staff Augmentation",
@@ -123,13 +124,29 @@ const consultingServices = [
       <FiUserPlus className="w-8 h-8 text-[#f0a709] group-hover:text-[#fff]" />
     ),
     image:
-      "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1975&q=80",
+      "https://images.unsplash.com/photo-1641122669951-3e2aff778d3b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+];
+const consultingServices1 = [
+  {
+    title: "E-Commerce Development & Services Solutions",
+    description:
+      "Complete e-commerce solutions including online store development, payment integration, and digital marketing strategies.",
+    icon: (
+      <FiShoppingCart className="w-8 h-8 text-[#f0a709] group-hover:text-[#fff]" />
+    ),
+    image:
+      "https://images.unsplash.com/photo-1726607424599-db0c41681494?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 const Counter = ({ end, duration = 2000 }) => {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
   const hasCounted = useRef(false);
+
+  const formatNumberWithCommas = (number) => {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -177,7 +194,7 @@ const Counter = ({ end, duration = 2000 }) => {
     };
   }, [end, duration]);
 
-  return <span ref={ref}>{count}</span>;
+  return <span ref={ref}>{formatNumberWithCommas(count)}</span>;
 };
 const ConsultingServices = () => {
   return (
@@ -256,6 +273,88 @@ const ConsultingServices = () => {
                   <p className="text-white group-hover:text-[#000]">
                     {service.description}
                   </p>
+                  <Link
+                    href="#contact-footer"
+                    className="flex mt-10 items-center text-[#f8ac06] font-medium group-hover:text-[#fff] transition-colors"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      if (service.title === "E Commerence") {
+                        window.location.href = "/#pricing-section";
+                      } else {
+                        document
+                          .getElementById("contact-footer")
+                          ?.scrollIntoView({
+                            behavior: "smooth",
+                          });
+                      }
+                    }}
+                  >
+                    <span>Discover now</span>
+                    <svg
+                      className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      ></path>
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="flex justify-center w-full md:w-[45%] lg:w-[75%] mx-auto mt-12">
+            {consultingServices1.map((service, index) => (
+              <div
+                key={index}
+                className="group bg-[#100A1D] border border-[#997e43] hover:border-[#f0a709] hover:bg-[#f0a709] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+              >
+                <div className="h-72 relative">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <div className="bg-[#645024] group-hover:bg-[#b87f04] w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-[#000] transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-white group-hover:text-[#000]">
+                    {service.description}
+                  </p>
+                  <Link
+                    href="#contact-footer"
+                    className="flex mt-10 items-center text-[#f8ac06] font-medium group-hover:text-[#fff] transition-colors"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.location.href = "/#pricing-section";
+                    }}
+                  >
+                    <span>Discover now</span>
+                    <svg
+                      className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      ></path>
+                    </svg>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -461,9 +560,9 @@ const ConsultingServices = () => {
           {/* Additional Stats Section */}
           <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { number: 200, label: "Projects Completed", suffix: "+" },
+              { number: 1000, label: "Projects Completed", suffix: "+" },
               { number: 98, label: "Client Satisfaction", suffix: "%" },
-              { number: 15, label: "Years Experience", suffix: "+" },
+              { number: 8, label: "Years Experience", suffix: "+" },
               { number: 50, label: "Industry Experts", suffix: "+" },
             ].map((stat, index) => (
               <div key={index} className="text-center">

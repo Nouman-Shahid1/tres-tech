@@ -34,9 +34,9 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Consulting Services", href: "/consulting-services" },
-    { name: "Success Stories", href: "/success" },
     { name: "About", href: "/about" },
+    { name: "Products & Services ", href: "/consulting-services" },
+    // { name: "Success Stories", href: "/success" },
     { name: "Contact", href: "/contact-us" },
   ];
 

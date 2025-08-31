@@ -7,7 +7,7 @@ const PricingSection = () => {
     {
       name: "Basic Plan",
       description: "WordPress/Shopify Development",
-      price: billingCycle === "monthly" ? "₹999" : "₹899",
+      price: billingCycle === "monthly" ? "$999" : "$899",
       features: [
         "WordPress/Shopify Setup",
         "UI Designing",
@@ -22,7 +22,7 @@ const PricingSection = () => {
     {
       name: "Professional Plan",
       description: "Customizable dashboards and websites",
-      price: billingCycle === "monthly" ? "₹4999" : "₹4499",
+      price: billingCycle === "monthly" ? "$4999" : "$4499",
       features: [
         "UI Designing (1 revision)",
         "FrontEnd Development",
@@ -36,7 +36,7 @@ const PricingSection = () => {
     {
       name: "Advanced Plan",
       description: "Dashboards, websites and mobile apps",
-      price: billingCycle === "monthly" ? "₹9999" : "₹8999",
+      price: billingCycle === "monthly" ? "$9999" : "$8999",
       features: [
         "Logo Designing",
         "UI Designing (3 revisions)",
@@ -59,7 +59,10 @@ const PricingSection = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0F0828] to-[#100A1D] py-16 px-4">
+    <div
+      id="pricing-section"
+      className="min-h-screen bg-gradient-to-br from-[#0F0828] to-[#100A1D] py-16 px-4"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">

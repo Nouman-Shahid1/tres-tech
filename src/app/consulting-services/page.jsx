@@ -20,6 +20,7 @@ import {
   FiClipboard,
   FiShoppingCart,
 } from "react-icons/fi";
+import { GrMultimedia } from "react-icons/gr";
 import Footer from "@/components/Footer/Footer";
 import Link from "next/link";
 
@@ -126,19 +127,28 @@ const consultingServices = [
     image:
       "https://images.unsplash.com/photo-1641122669951-3e2aff778d3b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
-];
-const consultingServices1 = [
   {
     title: "E-Commerce Development & Services Solutions",
     description:
-      "Complete e-commerce solutions including online store development, payment integration, and digital marketing strategies.",
+      "we deliver comprehensive e-commerce solutions designed to help businesses build, scale, and succeed in the digital marketplace. From custom development to 24/7 support services and strategic digital marketing, we provide everything your business needs to stand out and grow online.",
     icon: (
-      <FiShoppingCart className="w-8 h-8 text-[#f0a709] group-hover:text-[#fff]" />
+      <FiShoppingCart className="w-6 h-6 text-[#f0a709] group-hover:text-[#fff]" />
     ),
     image:
       "https://images.unsplash.com/photo-1726607424599-db0c41681494?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
+  {
+    title: "SaaS-Powered Media Discovery Solutions",
+    description:
+      "we create innovative platforms that help users legally discover where to watch their favorite movies, shows, music, and educational content. We provide accurate guidance to maximize subscriptions while ensuring full copyright compliance.",
+    icon: (
+      <GrMultimedia className="w-6 h-6 text-[#f0a709] group-hover:text-[#fff]" />
+    ),
+    image:
+      "https://images.unsplash.com/photo-1514471157964-06459a4b9241?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
 ];
+
 const Counter = ({ end, duration = 2000 }) => {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
@@ -278,8 +288,18 @@ const ConsultingServices = () => {
                     className="flex mt-10 items-center text-[#f8ac06] font-medium group-hover:text-[#fff] transition-colors"
                     onClick={(e) => {
                       e.preventDefault();
-                      if (service.title === "E Commerence") {
-                        window.location.href = "/#pricing-section";
+                      if (
+                        service.title ===
+                        "E-Commerce Development & Services Solutions"
+                      ) {
+                        window.location.href =
+                          "/consulting-services/ecommercesolutions";
+                      } else if (
+                        service.title ===
+                        "SaaS-Powered Media Discovery Solutions"
+                      ) {
+                        window.location.href =
+                          "/consulting-services/saas-powered-media";
                       } else {
                         document
                           .getElementById("contact-footer")
@@ -308,7 +328,7 @@ const ConsultingServices = () => {
               </div>
             ))}
           </div>
-          <div className="flex justify-center w-full md:w-[45%] lg:w-[75%] mx-auto mt-12">
+          {/* <div className="flex justify-center w-full md:w-[45%] lg:w-[75%] mx-auto mt-12">
             {consultingServices1.map((service, index) => (
               <div
                 key={index}
@@ -358,7 +378,7 @@ const ConsultingServices = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
 

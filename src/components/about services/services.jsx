@@ -149,7 +149,10 @@ const ConsultingServices = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <button className="bg-white text-[#f0a709] hover:bg-[#f0a709] hover:text-black font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl inline-flex items-center">
+          <button
+            onClick={() => (window.location.href = "/consulting-services")}
+            className="bg-white text-[#f0a709] cursor-pointer hover:bg-[#f0a709] hover:text-black font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl inline-flex items-center"
+          >
             <span>Explore All Services</span>
             <svg
               className="w-4 h-4 ml-2"

@@ -21,6 +21,7 @@ import {
 import { SiNextdotjs, SiTypescript, SiTailwindcss } from "react-icons/si";
 import Footer from "@/components/Footer/Footer";
 import ConsultingServices from "@/components/about services/services";
+import Link from "next/link";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -39,6 +40,9 @@ const openSans = Open_Sans({
 });
 
 const AboutUs = () => {
+  const openCalendly = () => {
+    window.open("https://calendly.com/muhammadnoumansha140", "_blank");
+  };
   return (
     <div className={`${poppins.variable} ${openSans.variable} font-sans`}>
       {/* Hero Section */}
@@ -49,17 +53,18 @@ const AboutUs = () => {
             "url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80')",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-800/80 to-gray-600/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#100A1D] to-transparent"></div>
         <div className="relative z-10 text-white flex flex-col justify-center h-full px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32">
           <div className="max-w-2xl my-36">
-            <div className="inline-flex items-center bg-blue-500/20 px-4 py-2 rounded-full mb-6">
+            <div className="inline-flex items-center bg-[#f0a709]/50 px-4 py-2 rounded-full mb-6">
               <FiUsers className="mr-2" />
               <span className="text-sm font-medium tracking-wider">
                 INNOVATION DRIVEN
               </span>
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-              Crafting the <span className="text-blue-300">Digital</span> Future
+              Crafting the <span className="text-[#f0a709]">Digital</span>{" "}
+              Future
             </h1>
             <p className="text-lg md:text-xl mb-8 opacity-90 max-w-lg">
               Tres Tech Global is a leading technology company dedicated to
@@ -67,10 +72,10 @@ const AboutUs = () => {
               empower communities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
+              <button className="bg-white text-[#f0a709] hover:bg-[#f0a709] hover:text-black font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
                 <span>Explore Our Work</span>
               </button>
-              <button className="bg-transparent border-2 border-white hover:bg-white/10 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+              <button className="bg-transparent border-2 hover:text-[#f0a709] hover:border-[#f0a709] border-white hover:bg-white/10 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
                 <span>Join Our Team</span>
               </button>
             </div>
@@ -115,8 +120,8 @@ const AboutUs = () => {
               </p>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="bg-[#645024] p-3 rounded-full flex-shrink-0">
-                    <FiTrendingUp className="text-[#f0a709] text-xl" />
+                  <div className="bg-[#f0a709] p-3 rounded-full flex-shrink-0">
+                    <FiTrendingUp className="text-[#fff] text-xl" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2 text-[#f0a709]">
@@ -129,8 +134,8 @@ const AboutUs = () => {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="bg-[#645024] p-3 rounded-full flex-shrink-0">
-                    <FiAward className="text-[#f0a709] text-xl" />
+                  <div className="bg-[#f0a709] p-3 rounded-full flex-shrink-0">
+                    <FiAward className="text-[#fff] text-xl" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2 text-[#f0a709]">
@@ -143,8 +148,8 @@ const AboutUs = () => {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="bg-[#645024] p-3 rounded-full flex-shrink-0">
-                    <FiGlobe className="text-[#f0a709] text-xl" />
+                  <div className="bg-[#f0a709] p-3 rounded-full flex-shrink-0">
+                    <FiGlobe className="text-[#fff] text-xl" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2 text-[#f0a709]">
@@ -162,48 +167,103 @@ const AboutUs = () => {
         </div>
       </section>
       <ConsultingServices />
-      {/* Mission & Values */}
-      <section className="py-20 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 bg-white">
+      <section className="py-20 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 bg-gradient-to-br from-[#0F0828] to-[#100A1D]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <span className="inline-block bg-blue-100 text-[#27A1F6] px-4 py-2 rounded-full text-sm font-medium mb-4">
+            <span className="inline-block bg-[#1A1335] text-[#f0a709] px-6 py-3 rounded-full text-sm font-medium mb-4 tracking-wide uppercase">
               OUR CORE
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#4370F3] mb-4">
-              Mission & Values
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Mission & <span className="text-[#f0a709]">Values</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Guiding principles that drive everything we do at TechNeon.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Guiding principles that drive everything we do at Tres Tech.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-blue-500">
-              <div className="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-6">
-                <FiLayers className="text-[#27A1F6] text-2xl" />
+            <div className="bg-gradient-to-b from-[#1A1335] to-[#100A1D] p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-[#f0a709]/20 relative overflow-hidden group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#f0a709] to-transparent opacity-20 group-hover:opacity-30 transition-opacity rounded-xl"></div>
+              <div className="bg-[#f0a709] w-14 h-14 rounded-full flex items-center justify-center mb-6 relative z-10">
+                <svg
+                  className="w-6 h-6 text-[#100A1D]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                  ></path>
+                </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3">Our Mission</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold text-white mb-3 relative z-10">
+                Our Mission
+              </h3>
+              <p className="text-gray-300 relative z-10">
                 To empower businesses through innovative technology solutions
                 that drive growth, efficiency, and digital transformation.
               </p>
             </div>
-            <div className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-blue-500">
-              <div className="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-6">
-                <FiUsers className="text-[#27A1F6] text-2xl" />
+
+            <div className="bg-gradient-to-b from-[#1A1335] to-[#100A1D] p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-[#f0a709]/20 relative overflow-hidden group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#f0a709] to-transparent opacity-20 group-hover:opacity-30 transition-opacity rounded-xl"></div>
+              <div className="bg-[#f0a709] w-14 h-14 rounded-full flex items-center justify-center mb-6 relative z-10">
+                <svg
+                  className="w-6 h-6 text-[#100A1D]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  ></path>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                  ></path>
+                </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3">Our Vision</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold text-white mb-3 relative z-10">
+                Our Vision
+              </h3>
+              <p className="text-gray-300 relative z-10">
                 A world where technology seamlessly enhances every aspect of
                 business and daily life.
               </p>
             </div>
-            <div className="bg-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-blue-500">
-              <div className="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-6">
-                <FiCode className="text-[#27A1F6] text-2xl" />
+
+            <div className="bg-gradient-to-b from-[#1A1335] to-[#100A1D] p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-[#f0a709]/20 relative overflow-hidden group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#f0a709] to-transparent opacity-20 group-hover:opacity-30 transition-opacity rounded-xl"></div>
+              <div className="bg-[#f0a709] w-14 h-14 rounded-full flex items-center justify-center mb-6 relative z-10">
+                <svg
+                  className="w-6 h-6 text-[#100A1D]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  ></path>
+                </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3">Our Approach</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold text-white mb-3 relative z-10">
+                Our Approach
+              </h3>
+              <p className="text-gray-300 relative z-10">
                 Client-focused, agile development with cutting-edge technologies
                 and user-centered design.
               </p>
@@ -213,56 +273,119 @@ const AboutUs = () => {
       </section>
 
       {/* Tech Stack */}
-      <section className="py-20 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 bg-gray-50">
+      <section className="py-20 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 bg-gradient-to-b from-[#0F0828] to-[#100A1D]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <span className="inline-block bg-blue-100 text-[#27A1F6] px-4 py-2 rounded-full text-sm font-medium mb-4">
+            <span className="inline-block bg-[#1A1335] text-[#f0a709] px-6 py-3 rounded-full text-sm font-medium mb-4 tracking-wide uppercase">
               TECHNOLOGY
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#4370F3] mb-4">
-              Our Tech Stack
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Our <span className="text-[#f0a709]">Tech Stack</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We work with the most modern and reliable technologies to deliver
-              exceptional results.
+              exceptional results for your business.
             </p>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
             {[
               {
-                icon: <FaReact className="text-4xl text-blue-500" />,
+                icon: (
+                  <div className="w-12 h-12 bg-[#61DAFB] rounded-lg flex items-center justify-center">
+                    <span className="text-white font-bold text-xs">React</span>
+                  </div>
+                ),
                 name: "React",
+                color: "bg-[#61DAFB]",
               },
               {
-                icon: <SiNextdotjs className="text-4xl text-[#4370F3]" />,
+                icon: (
+                  <div className="w-12 h-12 bg-black rounded-lg flex items-center justify-center">
+                    <span className="text-white font-bold text-xs">
+                      Next.js
+                    </span>
+                  </div>
+                ),
                 name: "Next.js",
+                color: "bg-black",
               },
               {
-                icon: <SiTypescript className="text-4xl text-[#27A1F6]" />,
+                icon: (
+                  <div className="w-12 h-12 bg-[#3178C6] rounded-lg flex items-center justify-center">
+                    <span className="text-white font-bold text-xs">TS</span>
+                  </div>
+                ),
                 name: "TypeScript",
+                color: "bg-[#3178C6]",
               },
               {
-                icon: <SiTailwindcss className="text-4xl text-cyan-500" />,
+                icon: (
+                  <div className="w-12 h-12 bg-[#06B6D4] rounded-lg flex items-center justify-center">
+                    <span className="text-white font-bold text-xs">CSS</span>
+                  </div>
+                ),
                 name: "Tailwind",
+                color: "bg-[#06B6D4]",
               },
               {
-                icon: <FaNodeJs className="text-4xl text-green-600" />,
+                icon: (
+                  <div className="w-12 h-12 bg-[#339933] rounded-lg flex items-center justify-center">
+                    <span className="text-white font-bold text-xs">Node</span>
+                  </div>
+                ),
                 name: "Node.js",
+                color: "bg-[#339933]",
               },
               {
-                icon: <FaAws className="text-4xl text-orange-500" />,
+                icon: (
+                  <div className="w-12 h-12 bg-[#FF9900] rounded-lg flex items-center justify-center">
+                    <span className="text-white font-bold text-xs">AWS</span>
+                  </div>
+                ),
                 name: "AWS",
+                color: "bg-[#FF9900]",
               },
             ].map((tech, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all flex flex-col items-center justify-center"
+                className="bg-gradient-to-b from-[#1A1335] to-[#100A1D] p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-800 group"
               >
-                <div className="mb-4">{tech.icon}</div>
-                <h3 className="font-medium text-gray-700">{tech.name}</h3>
+                <div className="flex justify-center mb-4">{tech.icon}</div>
+                <h3 className="font-medium text-white text-center">
+                  {tech.name}
+                </h3>
               </div>
             ))}
+          </div>
+
+          {/* Additional tech showcase */}
+          <div className="mt-16 bg-gradient-to-r from-[#1A1335] to-[#100A1D] rounded-2xl p-8 border border-[#f0a709]/20">
+            <h3 className="text-2xl font-bold text-white text-center mb-6">
+              And Many More Technologies
+            </h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              {[
+                "Python",
+                "MongoDB",
+                "PostgreSQL",
+                "GraphQL",
+                "Docker",
+                "Kubernetes",
+                "Firebase",
+                "Vue.js",
+                "Angular",
+                "Swift",
+                "Kotlin",
+              ].map((tech, index) => (
+                <span
+                  key={index}
+                  className="bg-[#f0a709]/10 text-[#f0a709] px-4 py-2 rounded-full text-sm font-medium"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -369,22 +492,66 @@ const AboutUs = () => {
       </section> */}
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 bg-gradient-to-r from-blue-600 to-blue-800">
-        <div className="max-w-4xl mx-auto text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+      <section className="relative py-20 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            alt="Team collaboration"
+            className="w-full h-full object-cover"
+          />
+          {/* Dark overlay to ensure text readability */}
+          <div className="absolute inset-0 bg-black opacity-40"></div>
+        </div>
+
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl mb-8">
-            Let&apos;s discuss how TechNeon can help you achieve your digital
-            goals.
+          <p className="text-xl mb-8 text-white">
+            Let's discuss how we can help you achieve your business goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-[#27A1F6] hover:bg-gray-100 font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
-              <span>Get Started</span>
+            <button
+              onClick={openCalendly}
+              className="bg-[#f0a709] text-black hover:bg-white hover:text-[#f0a709] font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
+            >
+              <span>Schedule Consultation</span>
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                ></path>
+              </svg>
             </button>
-            <button className="bg-transparent border-2 border-white hover:bg-white/10 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+            <Link
+              href="/contact-us"
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+            >
               <span>Learn More</span>
-            </button>
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </Link>
           </div>
         </div>
       </section>

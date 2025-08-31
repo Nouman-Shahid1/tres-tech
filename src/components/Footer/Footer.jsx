@@ -379,7 +379,7 @@ function Footer() {
           <div className="border-t border-gray-200 py-6">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-gray-500 text-sm">
-                © 2020 Trace Tech Global. All rights reserved.
+                © 2020 Tres Tech Global. All rights reserved.
               </p>
               <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
                 <Link

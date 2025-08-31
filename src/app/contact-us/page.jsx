@@ -67,9 +67,9 @@ const ContactUs = () => {
             <p className="text-lg md:text-xl mb-8 opacity-90 max-w-lg">
               Get in touch with Tres Tech Global today. Our team of experts is
               here to understand your unique needs and provide innovative,
-              tailored solutions that drive success. Whether you’re interested
-              in our IT services, custom software, or recruitment consultancy,
-              we’re here to help
+              tailored solutions that drive success. Whether you&rsquo;re
+              interested in our IT services, custom software, or recruitment
+              consultancy, we&rsquo;re here to help
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button
@@ -156,8 +156,8 @@ const ContactUs = () => {
               Multiple Ways to <span className="text-[#f0a709]">Connect</span>
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Choose your preferred method to reach our team. We're available
-              through various channels to serve you better.
+              Choose your preferred method to reach our team. We&#39;re
+              available through various channels to serve you better.
             </p>
           </div>
 

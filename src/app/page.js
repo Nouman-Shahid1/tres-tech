@@ -414,7 +414,7 @@ export default function Home() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl mb-8 text-white">
-            Let's discuss how we can help you achieve your business goals.
+            Let&#39;s discuss how we can help you achieve your business goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button

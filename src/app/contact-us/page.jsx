@@ -353,7 +353,7 @@ const ContactUs = () => {
             <div className="relative h-full min-h-[500px] rounded-2xl overflow-hidden shadow-2xl border-2 border-[#f0a709]/30">
               <img
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                alt="Techneon team working"
+                alt="Tres-Tech team working"
                 className="object-cover w-full h-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#100A1D] to-transparent flex items-end p-8">

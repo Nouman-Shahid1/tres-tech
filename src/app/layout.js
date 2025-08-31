@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Techneon - Where Innovation Grows",
-  description: "Techneon",
+  title: "Tres Tech Global -  Where Tech Goes Global",
+  description: "Tres Tech Global",
 };
 
 export default function RootLayout({ children }) {

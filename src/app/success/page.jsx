@@ -115,7 +115,7 @@ const SuccessStories = () => {
               Success <span className="text-blue-300">Stories</span>
             </h1>
             <p className="text-lg md:text-xl mb-8 opacity-90 max-w-lg">
-              Discover how TechNeon has helped businesses transform through
+              Discover how Tres-Tech has helped businesses transform through
               innovative technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -267,7 +267,7 @@ const SuccessStories = () => {
                 </div>
               </div>
               <p className="text-gray-700 italic mb-6">
-                "TechNeon&apos;s e-commerce platform transformed our online
+                "Tres-Tech&apos;s e-commerce platform transformed our online
                 sales. Their team understood our vision and delivered beyond
                 expectations. The 240% increase in sales speaks for itself."
               </p>
@@ -302,7 +302,7 @@ const SuccessStories = () => {
                 </div>
               </div>
               <p className="text-gray-700 italic mb-6">
-                "The patient management system TechNeon built for us has been
+                "The patient management system Tres-Tech built for us has been
                 game-changing. Our staff is more efficient, and patients love
                 the new digital experience. A true partner in every sense."
               </p>
@@ -338,7 +338,7 @@ const SuccessStories = () => {
               </div>
               <p className="text-gray-700 italic mb-6">
                 "The supply chain optimization platform delivered $12M in annual
-                savings. TechNeon&apos;s expertise in AI and logistics was
+                savings. Tres-Tech&apos;s expertise in AI and logistics was
                 evident throughout the project. Exceptional results and
                 partnership."
               </p>

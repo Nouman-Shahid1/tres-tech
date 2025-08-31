@@ -161,7 +161,7 @@ function Footer() {
               <Link href="/" className="inline-block">
                 <Image
                   src={logo}
-                  alt="Techneon Logo"
+                  alt="Tres-Tech Logo"
                   className="h-24 w-auto object-contain"
                 />
               </Link>

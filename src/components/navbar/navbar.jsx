@@ -5,7 +5,7 @@ import logo from "../../assests/logo.png";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Open_Sans } from "next/font/google";
-import { FiMenu, FiX, FiArrowRight } from "react-icons/fi";
+import { FiMenu, FiX, FiArrowRight, FiUser } from "react-icons/fi";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -28,8 +28,23 @@ export default function Navbar() {
       setScrolled(window.scrollY > 50);
     };
 
+    // Force scrolled state when on pricing section
+    const checkPricingSection = () => {
+      if (window.location.hash === "#pricing-section") {
+        setScrolled(true);
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("hashchange", checkPricingSection);
+
+    // Check on initial load
+    checkPricingSection();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("hashchange", checkPricingSection);
+    };
   }, []);
 
   const navLinks = [
@@ -49,7 +64,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-150 ${
         scrolled ? "bg-[#171717] shadow-md py-2" : "bg-transparent py-4"
       } ${openSans.className}`}
     >
@@ -61,7 +76,7 @@ export default function Navbar() {
               alt="Logo"
               width={scrolled ? 200 : 240}
               height={scrolled ? 30 : 50}
-              className="transition-all duration-300 object-contain"
+              className="transition-all duration-150 object-contain"
             />
           </div>
 
@@ -78,11 +93,11 @@ export default function Navbar() {
                       : scrolled
                       ? "text-[#f0a709]"
                       : "text-[#f0a709]"
-                  } font-semibold hover:text-white transition-colors duration-200 relative group`}
+                  } font-semibold hover:text-white transition-colors duration-100 relative group`}
                 >
                   {link.name}
                   <span
-                    className={`absolute left-0 -bottom-1 h-0.5 bg-white transition-all duration-300 ${
+                    className={`absolute left-0 -bottom-1 h-0.5 bg-white transition-all duration-150 ${
                       isActive ? "w-full" : "w-0 group-hover:w-full"
                     }`}
                   ></span>
@@ -91,11 +106,11 @@ export default function Navbar() {
             })}
             <button
               onClick={openCalendly}
-              className={`ml-6 px-6 py-3 rounded-full font-bold text-sm transition-all duration-300 ${
+              className={`ml-4 px-6 py-3 rounded-full font-bold text-sm transition-all duration-150 ${
                 scrolled
                   ? "bg-white text-[#f0a709] hover:bg-[#f0a709] hover:text-black"
                   : "bg-white text-[#f0a709] hover:bg-[#f0a709] hover:text-black"
-              } shadow-lg hover:shadow-xl hover:translate-y-[-2px] flex items-center cursor-pointer`}
+              } shadow-lg hover:shadow-xl flex items-center cursor-pointer`}
             >
               FREE CONSULTATION
               <FiArrowRight className="ml-2" />
@@ -123,7 +138,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div
-          className={`md:hidden fixed inset-0 bg-[#171717] z-40 mt-16 transition-all duration-300 ${
+          className={`md:hidden fixed inset-0 bg-[#171717] z-40 mt-16 transition-all duration-150 ${
             isMobileMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
           }`}
         >
@@ -134,7 +149,7 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`block px-3 py-4 text-lg font-medium rounded-md transition-colors ${
+                  className={`block px-3 py-4 text-lg font-medium rounded-md transition-colors duration-100 ${
                     isActive
                       ? "text-white bg-[#f0a709]/20"
                       : "text-gray-300 hover:bg-[#f0a709]/10 hover:text-white"
@@ -153,7 +168,7 @@ export default function Navbar() {
                 openCalendly();
                 setMobileMenuOpen(false);
               }}
-              className="w-full mt-4 px-6 py-4 bg-gradient-to-r from-[#f0a709] to-[#ffbf4d] text-black font-bold rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all"
+              className="w-full mt-4 px-6 py-4 bg-gradient-to-r from-[#f0a709] to-[#ffbf4d] text-black font-bold rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-150"
             >
               FREE CONSULTATION
               <FiArrowRight className="ml-2" />

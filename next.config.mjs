@@ -16,6 +16,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/stripecheckout",
+        destination: "https://buy.stripe.com/9B6cMY1zmgar30CaXt48000",
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

@@ -241,28 +241,58 @@ export default function Home() {
             </p>
           </div>
           
-          {/* Marquee */}
+          {/* Marquee with Beautiful Cards */}
           <div className="overflow-hidden">
-            <div className="flex animate-marquee whitespace-nowrap">
-              <div className="flex items-center space-x-16 mx-8">
-                <img src="https://logos-world.net/wp-content/uploads/2021/02/JP-Morgan-Chase-Logo.png" alt="JPMorgan Chase" className="h-12 object-contain filter brightness-0 invert" />
-                <img src="https://logos-world.net/wp-content/uploads/2021/02/Capital-One-Logo.png" alt="Capital One" className="h-12 object-contain filter brightness-0 invert" />
-                <img src="https://logos-world.net/wp-content/uploads/2021/02/Bank-of-America-Logo.png" alt="Bank of America" className="h-12 object-contain filter brightness-0 invert" />
-                <img src="https://logos-world.net/wp-content/uploads/2021/02/Goldman-Sachs-Logo.png" alt="Goldman Sachs" className="h-12 object-contain filter brightness-0 invert" />
-                <img src="https://logos-world.net/wp-content/uploads/2021/02/Wells-Fargo-Logo.png" alt="Wells Fargo" className="h-12 object-contain filter brightness-0 invert" />
-                <img src="https://logos-world.net/wp-content/uploads/2021/02/Citigroup-Logo.png" alt="Citigroup" className="h-12 object-contain filter brightness-0 invert" />
-                <img src="https://logos-world.net/wp-content/uploads/2021/02/Morgan-Stanley-Logo.png" alt="Morgan Stanley" className="h-12 object-contain filter brightness-0 invert" />
-                <img src="https://logos-world.net/wp-content/uploads/2021/02/American-Express-Logo.png" alt="American Express" className="h-12 object-contain filter brightness-0 invert" />
+            <div className="flex animate-marquee hover:pause-animation whitespace-nowrap">
+              <div className="flex items-center space-x-8 mx-4">
+                {[
+                  "JPMorgan Chase & Co.",
+                  "Capital One",
+                  "Bank of America",
+                  "Goldman Sachs",
+                  "Wells Fargo",
+                  "Citigroup",
+                  "Morgan Stanley",
+                  "American Express"
+                ].map((company, index) => (
+                  <div
+                    key={index}
+                    className="bg-gradient-to-b from-[#1A1335] to-[#100A1D] p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-800 relative min-w-[280px] flex-shrink-0"
+                  >
+                    <div className="absolute top-0 right-0 w-16 h-16 bg-[#f0a709] opacity-5 rounded-bl-full"></div>
+                    <div className="absolute bottom-0 left-0 w-12 h-12 bg-[#f0a709] opacity-5 rounded-tr-full"></div>
+                    
+                    <div className="text-center relative z-10">
+                      <h3 className="text-lg font-bold text-white mb-2">{company}</h3>
+                      <div className="w-12 h-1 bg-[#f0a709] mx-auto rounded-full"></div>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div className="flex items-center space-x-16 mx-8">
-                <img src="https://logos-world.net/wp-content/uploads/2021/02/JP-Morgan-Chase-Logo.png" alt="JPMorgan Chase" className="h-12 object-contain filter brightness-0 invert" />
-                <img src="https://logos-world.net/wp-content/uploads/2021/02/Capital-One-Logo.png" alt="Capital One" className="h-12 object-contain filter brightness-0 invert" />
-                <img src="https://logos-world.net/wp-content/uploads/2021/02/Bank-of-America-Logo.png" alt="Bank of America" className="h-12 object-contain filter brightness-0 invert" />
-                <img src="https://logos-world.net/wp-content/uploads/2021/02/Goldman-Sachs-Logo.png" alt="Goldman Sachs" className="h-12 object-contain filter brightness-0 invert" />
-                <img src="https://logos-world.net/wp-content/uploads/2021/02/Wells-Fargo-Logo.png" alt="Wells Fargo" className="h-12 object-contain filter brightness-0 invert" />
-                <img src="https://logos-world.net/wp-content/uploads/2021/02/Citigroup-Logo.png" alt="Citigroup" className="h-12 object-contain filter brightness-0 invert" />
-                <img src="https://logos-world.net/wp-content/uploads/2021/02/Morgan-Stanley-Logo.png" alt="Morgan Stanley" className="h-12 object-contain filter brightness-0 invert" />
-                <img src="https://logos-world.net/wp-content/uploads/2021/02/American-Express-Logo.png" alt="American Express" className="h-12 object-contain filter brightness-0 invert" />
+              <div className="flex items-center space-x-8 mx-4">
+                {[
+                  "JPMorgan Chase & Co.",
+                  "Capital One",
+                  "Bank of America",
+                  "Goldman Sachs",
+                  "Wells Fargo",
+                  "Citigroup",
+                  "Morgan Stanley",
+                  "American Express"
+                ].map((company, index) => (
+                  <div
+                    key={`duplicate-${index}`}
+                    className="bg-gradient-to-b from-[#1A1335] to-[#100A1D] p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-800 relative min-w-[280px] flex-shrink-0"
+                  >
+                    <div className="absolute top-0 right-0 w-16 h-16 bg-[#f0a709] opacity-5 rounded-bl-full"></div>
+                    <div className="absolute bottom-0 left-0 w-12 h-12 bg-[#f0a709] opacity-5 rounded-tr-full"></div>
+                    
+                    <div className="text-center relative z-10">
+                      <h3 className="text-lg font-bold text-white mb-2">{company}</h3>
+                      <div className="w-12 h-1 bg-[#f0a709] mx-auto rounded-full"></div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

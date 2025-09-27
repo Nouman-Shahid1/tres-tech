@@ -235,7 +235,7 @@ export default function Home() {
             Trusted by Industry Leaders
           </h2>
           <p className="text-lg text-white mb-12 max-w-3xl mx-auto">
-            We're proud to partner with some of America's most prestigious companies, 
+            We&apos;re proud to partner with some of America&apos;s most prestigious companies, 
             delivering innovative solutions that drive success across industries.
           </p>
           

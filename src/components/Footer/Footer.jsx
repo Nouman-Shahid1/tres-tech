@@ -27,7 +27,7 @@ import { SiGooglepay, SiStripe } from "react-icons/si";
 import { FiLock } from "react-icons/fi";
 function Footer() {
   const openCalendly = () => {
-    window.open("https://calendly.com/muhammadnoumansha140", "_blank");
+    window.open("https://calendly.com/consultancy-trestech-global", "_blank");
   };
 
   return (

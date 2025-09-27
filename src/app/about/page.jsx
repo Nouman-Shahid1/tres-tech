@@ -41,7 +41,7 @@ const openSans = Open_Sans({
 
 const AboutUs = () => {
   const openCalendly = () => {
-    window.open("https://calendly.com/muhammadnoumansha140", "_blank");
+    window.open("https://calendly.com/consultancy-trestech-global", "_blank");
   };
   return (
     <div className={`${poppins.variable} ${openSans.variable} font-sans`}>

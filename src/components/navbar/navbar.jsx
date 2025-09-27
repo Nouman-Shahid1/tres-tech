@@ -20,7 +20,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   const openCalendly = () => {
-    window.open("https://calendly.com/muhammadnoumansha140", "_blank");
+    window.open("https://calendly.com/consultancy-trestech-global", "_blank");
   };
 
   useEffect(() => {

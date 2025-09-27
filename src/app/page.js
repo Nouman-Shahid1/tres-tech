@@ -228,6 +228,45 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Trusted Partners Section */}
+      <section className="py-20 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 bg-gray-900">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#f0a709] mb-6">
+            Trusted by Industry Leaders
+          </h2>
+          <p className="text-lg text-white mb-12 max-w-3xl mx-auto">
+            We're proud to partner with some of America's most prestigious companies, 
+            delivering innovative solutions that drive success across industries.
+          </p>
+          
+          {/* Marquee */}
+          <div className="overflow-hidden">
+            <div className="flex animate-marquee whitespace-nowrap">
+              <div className="flex items-center space-x-16 mx-8">
+                <span className="text-2xl font-bold text-white">JPMorgan Chase & Co.</span>
+                <span className="text-2xl font-bold text-white">Capital One</span>
+                <span className="text-2xl font-bold text-white">Bank of America</span>
+                <span className="text-2xl font-bold text-white">Goldman Sachs</span>
+                <span className="text-2xl font-bold text-white">Wells Fargo</span>
+                <span className="text-2xl font-bold text-white">Citigroup</span>
+                <span className="text-2xl font-bold text-white">Morgan Stanley</span>
+                <span className="text-2xl font-bold text-white">American Express</span>
+              </div>
+              <div className="flex items-center space-x-16 mx-8">
+                <span className="text-2xl font-bold text-white">JPMorgan Chase & Co.</span>
+                <span className="text-2xl font-bold text-white">Capital One</span>
+                <span className="text-2xl font-bold text-white">Bank of America</span>
+                <span className="text-2xl font-bold text-white">Goldman Sachs</span>
+                <span className="text-2xl font-bold text-white">Wells Fargo</span>
+                <span className="text-2xl font-bold text-white">Citigroup</span>
+                <span className="text-2xl font-bold text-white">Morgan Stanley</span>
+                <span className="text-2xl font-bold text-white">American Express</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <ConsultingServices />
 
       {/* Case Study Section */}

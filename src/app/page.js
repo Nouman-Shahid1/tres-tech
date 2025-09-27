@@ -47,7 +47,7 @@ const openSans = Open_Sans({
 
 export default function Home() {
   const openCalendly = () => {
-    window.open("https://calendly.com/muhammadnoumansha140", "_blank");
+    window.open("https://calendly.com/consultancy-trestech-global", "_blank");
   };
 
   return (
@@ -229,38 +229,40 @@ export default function Home() {
       </section>
 
       {/* Trusted Partners Section */}
-      <section className="py-20 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 bg-gray-900">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#f0a709] mb-6">
-            Trusted by Industry Leaders
-          </h2>
-          <p className="text-lg text-white mb-12 max-w-3xl mx-auto">
-            We&apos;re proud to partner with some of America&apos;s most prestigious companies, 
-            delivering innovative solutions that drive success across industries.
-          </p>
+      <section className="py-28 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 bg-black">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#f0a709] mb-6">
+              Trusted by Industry Leaders
+            </h2>
+            <p className="text-lg text-white max-w-3xl mx-auto">
+              We&apos;re proud to partner with some of America&apos;s most prestigious companies, 
+              delivering innovative solutions that drive success across industries.
+            </p>
+          </div>
           
           {/* Marquee */}
           <div className="overflow-hidden">
             <div className="flex animate-marquee whitespace-nowrap">
               <div className="flex items-center space-x-16 mx-8">
-                <span className="text-2xl font-bold text-white">JPMorgan Chase & Co.</span>
-                <span className="text-2xl font-bold text-white">Capital One</span>
-                <span className="text-2xl font-bold text-white">Bank of America</span>
-                <span className="text-2xl font-bold text-white">Goldman Sachs</span>
-                <span className="text-2xl font-bold text-white">Wells Fargo</span>
-                <span className="text-2xl font-bold text-white">Citigroup</span>
-                <span className="text-2xl font-bold text-white">Morgan Stanley</span>
-                <span className="text-2xl font-bold text-white">American Express</span>
+                <img src="https://logos-world.net/wp-content/uploads/2021/02/JP-Morgan-Chase-Logo.png" alt="JPMorgan Chase" className="h-12 object-contain filter brightness-0 invert" />
+                <img src="https://logos-world.net/wp-content/uploads/2021/02/Capital-One-Logo.png" alt="Capital One" className="h-12 object-contain filter brightness-0 invert" />
+                <img src="https://logos-world.net/wp-content/uploads/2021/02/Bank-of-America-Logo.png" alt="Bank of America" className="h-12 object-contain filter brightness-0 invert" />
+                <img src="https://logos-world.net/wp-content/uploads/2021/02/Goldman-Sachs-Logo.png" alt="Goldman Sachs" className="h-12 object-contain filter brightness-0 invert" />
+                <img src="https://logos-world.net/wp-content/uploads/2021/02/Wells-Fargo-Logo.png" alt="Wells Fargo" className="h-12 object-contain filter brightness-0 invert" />
+                <img src="https://logos-world.net/wp-content/uploads/2021/02/Citigroup-Logo.png" alt="Citigroup" className="h-12 object-contain filter brightness-0 invert" />
+                <img src="https://logos-world.net/wp-content/uploads/2021/02/Morgan-Stanley-Logo.png" alt="Morgan Stanley" className="h-12 object-contain filter brightness-0 invert" />
+                <img src="https://logos-world.net/wp-content/uploads/2021/02/American-Express-Logo.png" alt="American Express" className="h-12 object-contain filter brightness-0 invert" />
               </div>
               <div className="flex items-center space-x-16 mx-8">
-                <span className="text-2xl font-bold text-white">JPMorgan Chase & Co.</span>
-                <span className="text-2xl font-bold text-white">Capital One</span>
-                <span className="text-2xl font-bold text-white">Bank of America</span>
-                <span className="text-2xl font-bold text-white">Goldman Sachs</span>
-                <span className="text-2xl font-bold text-white">Wells Fargo</span>
-                <span className="text-2xl font-bold text-white">Citigroup</span>
-                <span className="text-2xl font-bold text-white">Morgan Stanley</span>
-                <span className="text-2xl font-bold text-white">American Express</span>
+                <img src="https://logos-world.net/wp-content/uploads/2021/02/JP-Morgan-Chase-Logo.png" alt="JPMorgan Chase" className="h-12 object-contain filter brightness-0 invert" />
+                <img src="https://logos-world.net/wp-content/uploads/2021/02/Capital-One-Logo.png" alt="Capital One" className="h-12 object-contain filter brightness-0 invert" />
+                <img src="https://logos-world.net/wp-content/uploads/2021/02/Bank-of-America-Logo.png" alt="Bank of America" className="h-12 object-contain filter brightness-0 invert" />
+                <img src="https://logos-world.net/wp-content/uploads/2021/02/Goldman-Sachs-Logo.png" alt="Goldman Sachs" className="h-12 object-contain filter brightness-0 invert" />
+                <img src="https://logos-world.net/wp-content/uploads/2021/02/Wells-Fargo-Logo.png" alt="Wells Fargo" className="h-12 object-contain filter brightness-0 invert" />
+                <img src="https://logos-world.net/wp-content/uploads/2021/02/Citigroup-Logo.png" alt="Citigroup" className="h-12 object-contain filter brightness-0 invert" />
+                <img src="https://logos-world.net/wp-content/uploads/2021/02/Morgan-Stanley-Logo.png" alt="Morgan Stanley" className="h-12 object-contain filter brightness-0 invert" />
+                <img src="https://logos-world.net/wp-content/uploads/2021/02/American-Express-Logo.png" alt="American Express" className="h-12 object-contain filter brightness-0 invert" />
               </div>
             </div>
           </div>

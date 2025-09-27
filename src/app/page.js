@@ -236,11 +236,12 @@ export default function Home() {
               Trusted by Industry Leaders
             </h2>
             <p className="text-lg text-white max-w-3xl mx-auto">
-              We&apos;re proud to partner with some of America&apos;s most prestigious companies, 
-              delivering innovative solutions that drive success across industries.
+              We&apos;re proud to partner with some of America&apos;s most
+              prestigious companies, delivering innovative solutions that drive
+              success across industries.
             </p>
           </div>
-          
+
           {/* Marquee with Beautiful Cards */}
           <div className="overflow-hidden">
             <div className="flex animate-marquee hover:pause-animation whitespace-nowrap">
@@ -253,7 +254,7 @@ export default function Home() {
                   "Wells Fargo",
                   "Citigroup",
                   "Morgan Stanley",
-                  "American Express"
+                  "American Express",
                 ].map((company, index) => (
                   <div
                     key={index}
@@ -261,9 +262,11 @@ export default function Home() {
                   >
                     <div className="absolute top-0 right-0 w-16 h-16 bg-[#f0a709] opacity-5 rounded-bl-full"></div>
                     <div className="absolute bottom-0 left-0 w-12 h-12 bg-[#f0a709] opacity-5 rounded-tr-full"></div>
-                    
+
                     <div className="text-center relative z-10">
-                      <h3 className="text-lg font-bold text-white mb-2">{company}</h3>
+                      <h3 className="text-lg font-bold text-white mb-2">
+                        {company}
+                      </h3>
                       <div className="w-12 h-1 bg-[#f0a709] mx-auto rounded-full"></div>
                     </div>
                   </div>
@@ -278,7 +281,7 @@ export default function Home() {
                   "Wells Fargo",
                   "Citigroup",
                   "Morgan Stanley",
-                  "American Express"
+                  "American Express",
                 ].map((company, index) => (
                   <div
                     key={`duplicate-${index}`}
@@ -286,9 +289,11 @@ export default function Home() {
                   >
                     <div className="absolute top-0 right-0 w-16 h-16 bg-[#f0a709] opacity-5 rounded-bl-full"></div>
                     <div className="absolute bottom-0 left-0 w-12 h-12 bg-[#f0a709] opacity-5 rounded-tr-full"></div>
-                    
+
                     <div className="text-center relative z-10">
-                      <h3 className="text-lg font-bold text-white mb-2">{company}</h3>
+                      <h3 className="text-lg font-bold text-white mb-2">
+                        {company}
+                      </h3>
                       <div className="w-12 h-1 bg-[#f0a709] mx-auto rounded-full"></div>
                     </div>
                   </div>
@@ -464,6 +469,80 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+      <section className="py-28 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 bg-black">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#f0a709] mb-6">
+              Trusted by Industry Leaders
+            </h2>
+            <p className="text-lg text-white max-w-3xl mx-auto">
+              We&apos;re proud to partner with some of America&apos;s most
+              prestigious companies, delivering innovative solutions that drive
+              success across industries.
+            </p>
+          </div>
+
+          {/* Marquee with Beautiful Cards */}
+          <div className="overflow-hidden">
+            <div className="flex animate-marquee hover:pause-animation whitespace-nowrap">
+              <div className="flex items-center space-x-8 mx-4">
+                {[
+                  "JPMorgan Chase & Co.",
+                  "Capital One",
+                  "Bank of America",
+                  "Goldman Sachs",
+                  "Wells Fargo",
+                  "Citigroup",
+                  "Morgan Stanley",
+                  "American Express",
+                ].map((company, index) => (
+                  <div
+                    key={index}
+                    className="bg-gradient-to-b from-[#1A1335] to-[#100A1D] p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-800 relative min-w-[280px] flex-shrink-0"
+                  >
+                    <div className="absolute top-0 right-0 w-16 h-16 bg-[#f0a709] opacity-5 rounded-bl-full"></div>
+                    <div className="absolute bottom-0 left-0 w-12 h-12 bg-[#f0a709] opacity-5 rounded-tr-full"></div>
+
+                    <div className="text-center relative z-10">
+                      <h3 className="text-lg font-bold text-white mb-2">
+                        {company}
+                      </h3>
+                      <div className="w-12 h-1 bg-[#f0a709] mx-auto rounded-full"></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="flex items-center space-x-8 mx-4">
+                {[
+                  "JPMorgan Chase & Co.",
+                  "Capital One",
+                  "Bank of America",
+                  "Goldman Sachs",
+                  "Wells Fargo",
+                  "Citigroup",
+                  "Morgan Stanley",
+                  "American Express",
+                ].map((company, index) => (
+                  <div
+                    key={`duplicate-${index}`}
+                    className="bg-gradient-to-b from-[#1A1335] to-[#100A1D] p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-800 relative min-w-[280px] flex-shrink-0"
+                  >
+                    <div className="absolute top-0 right-0 w-16 h-16 bg-[#f0a709] opacity-5 rounded-bl-full"></div>
+                    <div className="absolute bottom-0 left-0 w-12 h-12 bg-[#f0a709] opacity-5 rounded-tr-full"></div>
+
+                    <div className="text-center relative z-10">
+                      <h3 className="text-lg font-bold text-white mb-2">
+                        {company}
+                      </h3>
+                      <div className="w-12 h-1 bg-[#f0a709] mx-auto rounded-full"></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>

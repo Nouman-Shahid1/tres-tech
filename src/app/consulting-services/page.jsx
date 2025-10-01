@@ -300,6 +300,12 @@ const ConsultingServices = () => {
                       ) {
                         window.location.href =
                           "/consulting-services/saas-powered-media";
+                      } else if (
+                        service.title ===
+                        "Tech & Non-Tech Bench Sales Recruitment"
+                      ) {
+                        window.location.href =
+                          "/consulting-services/recruitment";
                       } else {
                         document
                           .getElementById("contact-footer")

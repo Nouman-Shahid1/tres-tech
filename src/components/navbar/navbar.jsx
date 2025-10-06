@@ -51,6 +51,7 @@ export default function Navbar() {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Products & Services ", href: "/consulting-services" },
+    { name: "Recruitment Services", href: "/consulting-services/recruitment" },
     // { name: "Success Stories", href: "/success" },
     { name: "Contact", href: "/contact-us" },
   ];
@@ -58,6 +59,10 @@ export default function Navbar() {
   const isActiveLink = (href) => {
     if (href === "/") {
       return pathname === "/";
+    }
+    // Special case: if on recruitment page, only highlight recruitment tab
+    if (pathname === "/consulting-services/recruitment") {
+      return href === "/consulting-services/recruitment";
     }
     return pathname.startsWith(href);
   };

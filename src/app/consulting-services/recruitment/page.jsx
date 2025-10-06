@@ -284,30 +284,42 @@ const Recruitment = () => {
               PRICING PLANS
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Job Guarantee Recruitment <span className="text-[#f0a709]">Services</span>
+              Job Guarantee Recruitment{" "}
+              <span className="text-[#f0a709]">Services</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Both pricing plans come with job guarantee. We&apos;ve designed flexible pricing plans to help you secure your dream job with transparency and maximum value.
+              Our comprehensive pricing plans include job guarantee services and
+              internship programs. We&apos;ve designed flexible options to help
+              you secure your dream job with transparency and maximum value.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {/* Essential Plan */}
             <div className="bg-gradient-to-b from-[#1A1335] to-[#100A1D] p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-800 relative">
               <div className="absolute top-4 right-4">
-                <span className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">JOB GUARANTEE</span>
+                <span className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                  JOB GUARANTEE
+                </span>
               </div>
               <div className="absolute top-0 right-0 w-24 h-24 bg-[#f0a709] opacity-5 rounded-bl-full"></div>
               <div className="absolute bottom-0 left-0 w-16 h-16 bg-[#f0a709] opacity-5 rounded-tr-full"></div>
-              
+
               <div className="mb-6">
-                <h3 className="text-2xl font-bold text-white mb-2">Essential Plan</h3>
-                <p className="text-gray-300">Perfect for professionals looking to kick-start their recruitment journey with job guarantee.</p>
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  Essential Plan
+                </h3>
+                <p className="text-gray-300">
+                  Perfect for professionals looking to kick-start their
+                  recruitment journey with job guarantee.
+                </p>
               </div>
 
               <div className="mb-8">
                 <div className="text-center mb-6">
-                  <div className="text-4xl font-bold text-[#f0a709] mb-2">$1,050</div>
+                  <div className="text-4xl font-bold text-[#f0a709] mb-2">
+                    $1,050
+                  </div>
                   <div className="text-gray-300">Total for 3 Months</div>
                 </div>
                 <div className="space-y-2 text-sm text-gray-300">
@@ -329,59 +341,210 @@ const Recruitment = () => {
               </div>
 
               <div className="mb-6">
-                <h4 className="text-lg font-bold text-white mb-4">What&apos;s Included:</h4>
+                <h4 className="text-lg font-bold text-white mb-4">
+                  What&apos;s Included:
+                </h4>
                 <ul className="space-y-3 text-gray-300">
-                  <li className="flex items-start"><FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" /> ATS-Friendly Resume Creation</li>
-                  <li className="flex items-start"><FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" /> LinkedIn Profile Optimization</li>
-                  <li className="flex items-start"><FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" /> Job Portal Profile Creation</li>
-                  <li className="flex items-start"><FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" /> Active Profile Marketing</li>
-                  <li className="flex items-start"><FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" /> Technical & Screening Calls</li>
-                  <li className="flex items-start"><FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" /> Interview Scheduling</li>
-                  <li className="flex items-start"><FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" /> Interview Backend Support</li>
-                  <li className="flex items-start"><FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" /> Job Onboarding Support</li>
+                  <li className="flex items-start">
+                    <FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" />{" "}
+                    ATS-Friendly Resume Creation
+                  </li>
+                  <li className="flex items-start">
+                    <FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" />{" "}
+                    LinkedIn Profile Optimization
+                  </li>
+                  <li className="flex items-start">
+                    <FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" />{" "}
+                    Job Portal Profile Creation
+                  </li>
+                  <li className="flex items-start">
+                    <FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" />{" "}
+                    Active Profile Marketing
+                  </li>
+                  <li className="flex items-start">
+                    <FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" />{" "}
+                    Technical & Screening Calls
+                  </li>
+                  <li className="flex items-start">
+                    <FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" />{" "}
+                    Interview Scheduling
+                  </li>
+                  <li className="flex items-start">
+                    <FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" />{" "}
+                    Interview Backend Support
+                  </li>
+                  <li className="flex items-start">
+                    <FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" />{" "}
+                    Job Onboarding Support
+                  </li>
                 </ul>
+              </div>
+            </div>
+
+            {/* Internship Program Package */}
+            <div className="bg-gradient-to-b from-[#1A1335] to-[#100A1D] p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-green-400 relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-green-400 text-white px-4 py-2 rounded-full text-sm font-bold">
+                  UK ONLY
+                </span>
+              </div>
+              <div className="absolute top-4 right-4 mb-4">
+                <span className="bg-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                  INTERNSHIP PROGRAM
+                </span>
+              </div>
+              <div className="absolute top-0 right-0 w-24 h-24 bg-[#f0a709] opacity-5 rounded-bl-full"></div>
+              <div className="absolute bottom-0 left-0 w-16 h-16 bg-[#f0a709] opacity-5 rounded-tr-full"></div>
+
+              <div className="mb-6 mt-4">
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  Internship Program Package
+                </h3>
+                <p className="text-gray-300">
+                  Kickstart your career with our all-in-one professional
+                  development bundle.
+                </p>
+              </div>
+
+              <div className="mb-8">
+                <div className="text-center mb-6">
+                  <div className="text-4xl font-bold text-[#f0a709] mb-2">
+                    $1,350
+                  </div>
+                  <div className="text-gray-300">6-7 Month Program</div>
+                </div>
+              </div>
+
+              <div className="mb-6">
+                <h4 className="text-lg font-bold text-white mb-4">
+                  What's Included:
+                </h4>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-start">
+                    <FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" />{" "}
+                    Professional CV & LinkedIn Profile
+                  </li>
+                  <li className="flex items-start">
+                    <FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" />{" "}
+                    Official Internship Completion Letter
+                  </li>
+                  <li className="flex items-start">
+                    <FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" />{" "}
+                    Job Interview Preparation
+                  </li>
+                  <li className="flex items-start">
+                    <FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" />{" "}
+                    Professional References
+                  </li>
+                  <li className="flex items-start">
+                    <FiStar className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" />{" "}
+                    <span className="text-[#f0a709] font-semibold">
+                      Bonus: Cover Letter Writing & Career Guidance
+                    </span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="text-center text-sm text-gray-400 italic">
+                Perfect for students, graduates & job seekers looking to gain
+                real-world experience and stand out in today's job market.
               </div>
             </div>
 
             {/* Premium Plan */}
             <div className="bg-gradient-to-b from-[#1A1335] to-[#100A1D] p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-[#f0a709] relative">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-[#f0a709] text-black px-4 py-2 rounded-full text-sm font-bold">MOST POPULAR</span>
+                <span className="bg-[#f0a709] text-black px-4 py-2 rounded-full text-sm font-bold">
+                  MOST POPULAR
+                </span>
               </div>
               <div className="absolute top-4 right-4">
-                <span className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">JOB GUARANTEE</span>
+                <span className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                  JOB GUARANTEE
+                </span>
               </div>
               <div className="absolute top-0 right-0 w-24 h-24 bg-[#f0a709] opacity-10 rounded-bl-full"></div>
               <div className="absolute bottom-0 left-0 w-16 h-16 bg-[#f0a709] opacity-10 rounded-tr-full"></div>
-              
+
               <div className="mb-6 mt-4">
-                <h3 className="text-2xl font-bold text-white mb-2">Premium Advantage</h3>
-                <p className="text-gray-300">Designed for professionals who want priority support and a full-service recruitment solution with job guarantee.</p>
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  Premium Advantage
+                </h3>
+                <p className="text-gray-300">
+                  Designed for professionals who want priority support and a
+                  full-service recruitment solution with job guarantee.
+                </p>
               </div>
 
               <div className="mb-8">
                 <div className="text-center mb-6">
-                  <div className="text-4xl font-bold text-[#f0a709] mb-2">$850</div>
-                  <div className="text-gray-300">One-Time Subscription (Not Refundable)</div>
-                  <div className="text-green-400 text-sm font-semibold mt-1">Save $200 vs Essential Plan</div>
+                  <div className="text-4xl font-bold text-[#f0a709] mb-2">
+                    $850
+                  </div>
+                  <div className="text-gray-300">
+                    One-Time Subscription (Not Refundable)
+                  </div>
+                  <div className="text-green-400 text-sm font-semibold mt-1">
+                    Save $200 vs Essential Plan
+                  </div>
                 </div>
               </div>
 
               <div className="mb-6">
-                <h4 className="text-lg font-bold text-white mb-4">Everything Included:</h4>
+                <h4 className="text-lg font-bold text-white mb-4">
+                  Everything Included:
+                </h4>
                 <ul className="space-y-3 text-gray-300">
-                  <li className="flex items-start"><FiStar className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" /> <span className="text-[#f0a709] font-semibold">Prioritized Access to All Services</span></li>
-                  <li className="flex items-start"><FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" /> ATS-Friendly Resume Creation</li>
-                  <li className="flex items-start"><FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" /> LinkedIn Profile Optimization</li>
-                  <li className="flex items-start"><FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" /> Job Portal Profile Creation & Visibility</li>
-                  <li className="flex items-start"><FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" /> Active Profile Marketing</li>
-                  <li className="flex items-start"><FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" /> Direct Client & Prime Vendor Outreach</li>
-                  <li className="flex items-start"><FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" /> Technical & Screening Calls</li>
-                  <li className="flex items-start"><FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" /> Interview Scheduling & Training</li>
-                  <li className="flex items-start"><FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" /> Interview Backend Support</li>
-                  <li className="flex items-start"><FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" /> Job Onboarding Support</li>
-                  <li className="flex items-start"><FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" /> Documentation & Clearance Support</li>
-                  <li className="flex items-start"><FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" /> Weekly Progress Reports</li>
+                  <li className="flex items-start">
+                    <FiStar className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" />{" "}
+                    <span className="text-[#f0a709] font-semibold">
+                      Prioritized Access to All Services
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" />{" "}
+                    ATS-Friendly Resume Creation
+                  </li>
+                  <li className="flex items-start">
+                    <FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" />{" "}
+                    LinkedIn Profile Optimization
+                  </li>
+                  <li className="flex items-start">
+                    <FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" />{" "}
+                    Job Portal Profile Creation & Visibility
+                  </li>
+                  <li className="flex items-start">
+                    <FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" />{" "}
+                    Active Profile Marketing
+                  </li>
+                  <li className="flex items-start">
+                    <FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" />{" "}
+                    Direct Client & Prime Vendor Outreach
+                  </li>
+                  <li className="flex items-start">
+                    <FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" />{" "}
+                    Technical & Screening Calls
+                  </li>
+                  <li className="flex items-start">
+                    <FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" />{" "}
+                    Interview Scheduling & Training
+                  </li>
+                  <li className="flex items-start">
+                    <FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" />{" "}
+                    Interview Backend Support
+                  </li>
+                  <li className="flex items-start">
+                    <FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" />{" "}
+                    Job Onboarding Support
+                  </li>
+                  <li className="flex items-start">
+                    <FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" />{" "}
+                    Documentation & Clearance Support
+                  </li>
+                  <li className="flex items-start">
+                    <FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" />{" "}
+                    Weekly Progress Reports
+                  </li>
                 </ul>
               </div>
             </div>
@@ -390,19 +553,55 @@ const Recruitment = () => {
           {/* Why Choose Us */}
           <div className="mt-16 bg-gradient-to-b from-[#1A1335] to-[#100A1D] p-8 rounded-2xl shadow-xl border border-gray-800 relative">
             <div className="absolute top-0 right-0 w-24 h-24 bg-[#f0a709] opacity-5 rounded-bl-full"></div>
-            <h3 className="text-2xl font-bold text-[#f0a709] mb-6 text-center">Why Choose Tres Tech Global?</h3>
+            <h3 className="text-2xl font-bold text-[#f0a709] mb-6 text-center">
+              Why Choose Tres Tech Global?
+            </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <ul className="space-y-4 text-gray-300">
-                  <li className="flex items-start"><FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" /> <span><strong className="text-white">Proven Track Record:</strong> Success in job placements and backend support</span></li>
-                  <li className="flex items-start"><FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" /> <span><strong className="text-white">Guaranteed Results:</strong> Interviews according to your job profile</span></li>
-                  <li className="flex items-start"><FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" /> <span><strong className="text-white">Dedicated Support:</strong> Personal recruitment and training assistance</span></li>
+                  <li className="flex items-start">
+                    <FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" />{" "}
+                    <span>
+                      <strong className="text-white">
+                        Proven Track Record:
+                      </strong>{" "}
+                      Success in job placements and backend support
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" />{" "}
+                    <span>
+                      <strong className="text-white">
+                        Guaranteed Results:
+                      </strong>{" "}
+                      Interviews according to your job profile
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" />{" "}
+                    <span>
+                      <strong className="text-white">Dedicated Support:</strong>{" "}
+                      Personal recruitment and training assistance
+                    </span>
+                  </li>
                 </ul>
               </div>
               <div>
                 <ul className="space-y-4 text-gray-300">
-                  <li className="flex items-start"><FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" /> <span><strong className="text-white">Full Transparency:</strong> Weekly progress updates and clear communication</span></li>
-                  <li className="flex items-start"><FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" /> <span><strong className="text-white">Extensive Network:</strong> Access to recruiters, prime vendors, and direct clients</span></li>
+                  <li className="flex items-start">
+                    <FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" />{" "}
+                    <span>
+                      <strong className="text-white">Full Transparency:</strong>{" "}
+                      Weekly progress updates and clear communication
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <FiCheckCircle className="text-[#f0a709] mr-3 mt-0.5 flex-shrink-0" />{" "}
+                    <span>
+                      <strong className="text-white">Extensive Network:</strong>{" "}
+                      Access to recruiters, prime vendors, and direct clients
+                    </span>
+                  </li>
                 </ul>
               </div>
             </div>

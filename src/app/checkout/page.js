@@ -99,17 +99,24 @@ export default function Checkout() {
         },
         {
           OrderNumber: orderNumber,
-          OrderAmount: orderData.amount, // This should be in PKR now
           OrderDueDate: new Date(
             Date.now() + 30 * 24 * 60 * 60 * 1000
-          ).toLocaleDateString("en-GB"), // 30 days from now
+          ).toLocaleDateString("en-GB"),
+
           OrderType: "Service",
           IssueDate: new Date().toLocaleDateString("en-GB"),
           OrderExpireAfterSeconds: "0",
+
           CustomerName: `${orderData.customer.firstName} ${orderData.customer.lastName}`,
           CustomerMobile: orderData.customer.mobile || "",
           CustomerEmail: orderData.customer.email || "",
           CustomerAddress: orderData.customer.address || "",
+
+          Description: "Service Payment",
+
+          CurrencyAmount: orderData.originalUsdAmount.toString(),
+          Currency: "USD",
+          IsConverted: "true",
         },
       ];
 
@@ -321,35 +328,7 @@ export default function Checkout() {
                 required
               />
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-end">
-              <div className="flex-1">
-                <label className="block text-white font-semibold mb-2">
-                  Amount (USD)
-                </label>
-                <input
-                  type="number"
-                  name="amount"
-                  placeholder="Enter amount"
-                  value={formData.amount}
-                  onChange={handleInputChange}
-                  step="0.01"
-                  min="0.01"
-                  className="w-full p-4 bg-[#100A1D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#f0a709] focus:outline-none"
-                  required
-                />
-              </div>
-              <div className="w-full sm:w-auto">
-                <label className="block text-white font-semibold mb-2">
-                  Currency
-                </label>
-                <input
-                  type="text"
-                  value="USD"
-                  disabled
-                  className="w-full sm:w-32 p-4 bg-[#100A1D] border border-gray-600 rounded-lg text-white text-center cursor-not-allowed opacity-70"
-                />
-              </div>
-            </div>
+
             {/* Personal Information */}
             <div>
               <h3 className="text-lg font-semibold text-white mb-4">
@@ -376,54 +355,35 @@ export default function Checkout() {
                 />
               </div>
             </div>
-
-            {/* Billing Address */}
-            <div>
-              <h3 className="text-lg font-semibold text-white mb-4">
-                Billing Address
-              </h3>
-              <div className="space-y-4">
+            <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-end">
+              <div className="flex-1">
+                <label className="block text-white font-semibold mb-2">
+                  Amount
+                </label>
                 <input
-                  type="text"
-                  name="billingAddress"
-                  placeholder="Street address"
-                  value={formData.billingAddress}
+                  type="number"
+                  name="amount"
+                  placeholder="Enter amount"
+                  value={formData.amount}
                   onChange={handleInputChange}
+                  step="0.01"
+                  min="0.01"
                   className="w-full p-4 bg-[#100A1D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#f0a709] focus:outline-none"
                   required
                 />
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <input
-                    type="text"
-                    name="city"
-                    placeholder="City"
-                    value={formData.city}
-                    onChange={handleInputChange}
-                    className="p-4 bg-[#100A1D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#f0a709] focus:outline-none"
-                    required
-                  />
-                  <input
-                    type="text"
-                    name="zipCode"
-                    placeholder="ZIP code"
-                    value={formData.zipCode}
-                    onChange={handleInputChange}
-                    className="p-4 bg-[#100A1D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#f0a709] focus:outline-none"
-                    required
-                  />
-                </div>
               </div>
-              <input
-                type="tel"
-                name="mobile"
-                placeholder="Mobile number"
-                value={formData.mobile}
-                onChange={handleInputChange}
-                className="w-full mt-4 p-4 bg-[#100A1D] border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-[#f0a709] focus:outline-none"
-                required
-              />
+              {/* <div className="w-full sm:w-auto">
+                <label className="block text-white font-semibold mb-2">
+                  Currency
+                </label>
+                <input
+                  type="text"
+                  value="USD"
+                  disabled
+                  className="w-full sm:w-32 p-4 bg-[#100A1D] border border-gray-600 rounded-lg text-white text-center cursor-not-allowed opacity-70"
+                />
+              </div> */}
             </div>
-
             {/* Submit Button */}
             <button
               type="submit"

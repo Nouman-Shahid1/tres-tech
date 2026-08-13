@@ -102,10 +102,10 @@ const ContactUs = () => {
                   Emergency Support
                 </h3>
                 <a
-                  href="tel:+447482527700"
+                  href="tel:+17422227771"
                   className="text-[#f0a709] hover:text-[#ffbf4d] font-semibold text-lg block mt-1"
                 >
-                  +44 7482 527700
+                  +1 742 222 7771
                 </a>
               </div>
             </div>
@@ -118,10 +118,10 @@ const ContactUs = () => {
                   Email Us
                 </h3>
                 <a
-                  href="mailto:trestech21@gmail.com"
+                  href="mailto:Trestech.ca@gmail.com"
                   className="text-[#f0a709] hover:text-[#ffbf4d] font-semibold text-lg block mt-1"
                 >
-                  trestech21@gmail.com
+                  Trestech.ca@gmail.com
                 </a>
               </div>
             </div>
@@ -134,7 +134,7 @@ const ContactUs = () => {
                   WhatsApp
                 </h3>
                 <a
-                  href="https://wa.me/447482527700"
+                  href="https://wa.me/17422227771"
                   className="text-[#f0a709] hover:text-[#ffbf4d] font-semibold text-lg block mt-1"
                 >
                   Chat Now
@@ -193,10 +193,10 @@ const ContactUs = () => {
               </h3>
               <p className="text-gray-400 mb-2">
                 <a
-                  href="tel:+447482527700"
+                  href="tel:+17422227771"
                   className="hover:text-[#f0a709] font-medium transition-colors"
                 >
-                  +44 7482 527700
+                  +1 742 222 7771
                 </a>
               </p>
               <a
@@ -217,10 +217,10 @@ const ContactUs = () => {
               </h3>
               <p className="text-gray-400 mb-2">
                 <a
-                  href="mailto:trestech21@gmail.com"
+                  href="mailto:Trestech.ca@gmail.com"
                   className="hover:text-[#f0a709] font-medium transition-colors"
                 >
-                  trestech21@gmail.com
+                  Trestech.ca@gmail.com
                 </a>
               </p>
               <a

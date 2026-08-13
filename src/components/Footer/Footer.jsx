@@ -173,12 +173,12 @@ function Footer() {
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <FiPhone className="text-[#f0a709] mt-0.5" />
-                  <span className="text-white/50 text-sm">+447482527700‬</span>
+                  <span className="text-white/50 text-sm">+1 742 222 7771</span>
                 </div>
                 <div className="flex items-start gap-3">
                   <FiMail className="text-[#f0a709] mt-0.5" />
                   <span className="text-white/50 text-sm">
-                    trestech21@gmail.com
+                    Trestech.ca@gmail.com
                   </span>
                 </div>
                 <div className="flex items-start gap-3">

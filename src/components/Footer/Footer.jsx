@@ -184,9 +184,9 @@ function Footer() {
                 <div className="flex items-start gap-3">
                   <FiMapPin className="text-[#f0a709] mt-0.5" />
                   <span className="text-white/50 text-sm">
-                    OFFICE 14082 182-184 HIGH STREET NORTH EAST HAM
+                    116 LONGBOAT RUN W
                     <br />
-                    LONDON UNITED KINGDOM E6 2JA
+                    BRANTFORD, ONTARIO, CANADA
                   </span>
                 </div>
               </div>

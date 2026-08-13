@@ -171,11 +171,12 @@ const ContactUs = () => {
                 Our Headquarters
               </h3>
               <p className="text-gray-400 mb-4 text-sm leading-relaxed">
-                OFFICE 14082 182-184 HIGH STREET NORTH EAST HAM LONDON UNITED
-                KINGDOM E6 2JA
+                116 LONGBOAT RUN W, BRANTFORD, ONTARIO, CANADA
               </p>
               <a
-                href="#"
+                href="https://www.google.com/maps/dir/?api=1&destination=116+Longboat+Run+W,+Brantford,+ON,+Canada"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-[#f0a709] font-medium inline-flex items-center hover:underline"
               >
                 Get Directions <FiChevronRight className="ml-1" />
@@ -383,7 +384,7 @@ const ContactUs = () => {
       {/* Interactive Map Section */}
       <section className="relative h-[600px] w-full bg-black">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.197715236675!2d0.05200777697209901!3d51.53634697180615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a7a8b94b7b0b%3A0x3b0b0b0b0b0b0b0b!2s182-184%20High%20St%20N%2C%20London%20E6%202JA%2C%20UK!5e0!3m2!1sen!2sus!4v1720248561585!5m2!1sen!2sus"
+          src="https://www.google.com/maps?q=116+Longboat+Run+W,+Brantford,+ON,+Canada&output=embed"
           width="100%"
           height="100%"
           style={{
@@ -405,12 +406,16 @@ const ContactUs = () => {
                 Tres Tech Global Headquarters
               </h3>
               <p className="text-gray-300 mb-3 text-sm">
-                OFFICE 14082 182-184 HIGH STREET NORTH EAST HAM LONDON UNITED
-                KINGDOM E6 2JA
+                116 LONGBOAT RUN W, BRANTFORD, ONTARIO, CANADA
               </p>
-              <button className="bg-[#f0a709] text-black py-2 px-6 rounded-lg text-sm font-medium hover:bg-[#ffbf4d] transition-colors shadow-md">
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=116+Longboat+Run+W,+Brantford,+ON,+Canada"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-[#f0a709] text-black py-2 px-6 rounded-lg text-sm font-medium hover:bg-[#ffbf4d] transition-colors shadow-md"
+              >
                 Get Directions
-              </button>
+              </a>
             </div>
           </div>
         </div>
